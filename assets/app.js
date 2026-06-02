@@ -96,15 +96,17 @@
       '<div class="announce"><span>MANAGED BY CINEBELS &nbsp;|&nbsp; AUTHORISED KLIPSCH DISTRIBUTOR &nbsp;|&nbsp; EMI &amp; COD AVAILABLE &nbsp;|&nbsp; FREE DELIVERY ABOVE \u20B91,000</span></div>' +
       '<header class="site"><div class="wrap nav">' +
       '<button class="menu-toggle" aria-label="Menu">\u2630</button>' +
-      '<a class="brand" href="index.html" aria-label="Klipsch India home"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"><span class="brand-sub">INDIA</span></a>' +
+      '<a class="brand" href="index.html" aria-label="Klipsch India home"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"></a>' +
       '<div class="search"><input type="text" placeholder="Search speakers, soundbars, subwoofers\u2026" aria-label="Search products"></div>' +
       '<nav class="nav-links">' + nav + "</nav>" +
-      '<button class="cart-btn" data-open-cart aria-label="Open cart">Cart <span class="cart-count" data-cart-count>0</span></button>' +
+      '<button class="cart-btn" data-open-cart aria-label="Open cart" title="Cart">' +
+      '<svg class="cart-ico" viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1.3"></circle><circle cx="18" cy="21" r="1.3"></circle><path d="M1 1h3l2.5 13a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L23 6H6"></path></svg>' +
+      '<span class="cart-count" data-cart-count>0</span></button>' +
       "</div></header>";
   }
   function footer() {
     return '<footer class="site"><div class="wrap cols">' +
-      '<div><div class="brand brand-footer" style="margin-bottom:10px"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"><span class="brand-sub">INDIA</span></div>' +
+      '<div><div class="brand brand-footer" style="margin-bottom:10px"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"></div>' +
       '<p class="addr">Authorised India distributor<br>Cinerama Private Limited (Cinebels)<br>16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka 560022</p>' +
       '<p class="addr">Talk to us: +91 93413 30907</p></div>' +
       '<div><h5>Shop</h5><a href="category.html">All Products</a><a href="category.html?cat=Soundbar%20Speakers">Soundbars</a><a href="category.html?cat=Bluetooth%20Speakers">Bluetooth Speakers</a><a href="category.html?cat=Subwoofers">Subwoofers</a></div>' +
@@ -122,7 +124,12 @@
       '<div class="compare-bar" data-compare-bar><div class="wrap">' +
       '<strong style="font-size:13px">Compare</strong><div class="items" data-compare-items></div>' +
       '<button class="btn btn-primary" data-open-compare>Compare</button>' +
-      '<button class="btn btn-ghost" style="color:#fff;border-color:#555" data-clear-compare>Clear</button></div></div>' +
+      '<button class="btn btn-ghost" style="color:#fff;border-color:#555" data-clear-compare>Clear</button>' +
+      '<div class="cmp-add">' +
+      '<input type="text" data-compare-search placeholder="Search to add a product\u2026 (type 3+ letters)" aria-label="Search products to add to compare" autocomplete="off">' +
+      '<div class="cmp-suggest" data-compare-suggest></div>' +
+      '</div>' +
+      '</div></div>' +
       // compare modal
       '<div class="modal" data-compare-modal><div class="panel"><div class="mh"><h3>Compare products</h3><button data-close-compare>\u00D7</button></div>' +
       '<div data-compare-table></div></div></div>';
@@ -142,7 +149,13 @@
     qs("[data-close-cart]").addEventListener("click", closeCart);
     qs("[data-open-compare]").addEventListener("click", openCompare);
     qs("[data-close-compare]").addEventListener("click", closeCompare);
-    qs("[data-clear-compare]").addEventListener("click", function () { compare = []; save("klipsch_compare", compare); renderCompareBar(); syncCompareChecks(); });
+    qs("[data-clear-compare]").addEventListener("click", function () { compare = []; save("klipsch_compare", compare); renderCompareBar(); syncCompareChecks(); renderCompareSuggest(""); });
+    // compare search-to-add (item #10): text box + suggestion pills + type-ahead (>=3 chars)
+    var cs = qs("[data-compare-search]");
+    if (cs) {
+      cs.addEventListener("input", function () { renderCompareSuggest(cs.value); });
+      cs.addEventListener("focus", function () { renderCompareSuggest(cs.value); });
+    }
     // search -> category page
     var s = qs(".search input");
     if (s) s.addEventListener("keydown", function (e) { if (e.key === "Enter") location.href = "category.html?q=" + encodeURIComponent(s.value); });
@@ -151,6 +164,29 @@
   /* ---------- cart drawer render ---------- */
   function openCart() { qs("[data-cart-drawer]").classList.add("show"); }
   function closeCart() { qs("[data-cart-drawer]").classList.remove("show"); }
+  /* Cart recommendations (item #8): suggest LOWER-priced / accessory items than what's
+     already in the cart, to drive attach + conversion (never upsell higher-priced). */
+  function cartRecommendations(limit) {
+    if (!cart.length) return [];
+    var inCart = {}; cart.forEach(function (i) { inCart[i.sku] = true; });
+    var maxPrice = 0, catSet = {};
+    cart.forEach(function (it) {
+      var p = bySku(it.sku); if (!p) return;
+      if (p.price > maxPrice) maxPrice = p.price;
+      catSet[p.category] = true;
+    });
+    var pool = PRODUCTS.filter(function (p) {
+      return !inCart[p.sku] && p.inStock !== false && p.price < maxPrice;
+    });
+    // Prefer same-category accessories first, then any cheaper item; cheapest first.
+    pool.sort(function (a, b) {
+      var ca = catSet[a.category] ? 0 : 1, cb = catSet[b.category] ? 0 : 1;
+      if (ca !== cb) return ca - cb;
+      return a.price - b.price;
+    });
+    return pool.slice(0, limit || 3);
+  }
+
   function renderCart() {
     var items = qs("[data-cart-items]"), foot = qs("[data-cart-foot]");
     if (!items) return;
@@ -158,14 +194,32 @@
       items.innerHTML = '<div class="empty">Your cart is empty.<br><br><a class="btn btn-primary" href="category.html">Discover products</a></div>';
       foot.innerHTML = ""; return;
     }
-    items.innerHTML = cart.map(function (it) {
+    var rows = cart.map(function (it) {
       var p = bySku(it.sku); if (!p) return "";
       return '<div class="ci"><img src="' + p.image + '" alt="' + esc(p.shortName) + '">' +
-        '<div style="flex:1"><div class="nm">' + esc(p.shortName) + "</div>" +
-        '<div class="pr">' + inr(p.price) + ' <span style="color:#999;text-decoration:line-through;font-size:12px">' + inr(p.mrp) + "</span></div>" +
-        '<div class="qty"><button data-dec="' + p.sku + '">\u2212</button><span>' + it.qty + '</span><button data-inc="' + p.sku + '">+</button>' +
-        '<button data-rm="' + p.sku + '" style="margin-left:auto;color:#b5651d;border:none;background:none;cursor:pointer;font-size:12px">Remove</button></div></div></div>';
+        '<div class="ci-body"><div class="ci-top"><div class="nm">' + esc(p.shortName) + "</div>" +
+        '<button class="rm" data-rm="' + p.sku + '" aria-label="Remove ' + esc(p.shortName) + '">Remove</button></div>' +
+        '<div class="pr">' + inr(p.price) + (p.mrp > p.price ? ' <span style="color:#999;text-decoration:line-through;font-size:12px">' + inr(p.mrp) + "</span>" : "") + "</div>" +
+        '<div class="qty"><button data-dec="' + p.sku + '" aria-label="Decrease quantity">\u2212</button><span>' + it.qty + '</span><button data-inc="' + p.sku + '" aria-label="Increase quantity">+</button></div>' +
+        '</div></div>';
     }).join("");
+
+    // ---- "You might also like" widget inside the drawer (item #8) ----
+    var recs = cartRecommendations(3);
+    var recHtml = recs.length ? (
+      '<div class="cart-recs" data-cart-recs><div class="cr-head">You might also like</div>' +
+      '<div class="cr-sub">Add-ons that pair well \u2014 priced below your cart</div>' +
+      recs.map(function (p) {
+        return '<div class="cr-item">' +
+          '<a class="cr-img" href="' + pageUrl(p) + '"><img src="' + p.image + '" alt="' + esc(p.shortName) + '" loading="lazy"></a>' +
+          '<div class="cr-info"><a class="cr-nm" href="' + pageUrl(p) + '">' + esc(p.shortName) + '</a>' +
+          '<div class="cr-pr">' + inr(p.price) + ' <span class="cr-emi">EMI ' + inr(p.emiPerMonth) + '/mo</span></div></div>' +
+          '<button class="cr-add" data-rec-add="' + p.sku + '" aria-label="Add ' + esc(p.shortName) + ' to cart">Add</button>' +
+          '</div>';
+      }).join("") + '</div>'
+    ) : "";
+    items.innerHTML = rows + recHtml;
+
     var t = cartTotals();
     foot.innerHTML =
       '<div class="save-line">You\u2019re saving ' + inr(t.mrpSaving + t.offerDiscount) + ' on this order</div>' +
@@ -173,9 +227,10 @@
       '<div class="total"><span>Total</span><span>' + inr(t.payable) + "</span></div>" +
       '<a class="btn btn-primary btn-block" href="checkout.html">Checkout securely</a>' +
       '<div class="login-note">No account needed to start \u2014 sign in with phone or Amazon at checkout.</div>';
-    qsa("[data-inc]", foot.parentElement).forEach(function (b) { b.addEventListener("click", function () { var s = b.getAttribute("data-inc"); setQty(s, (cart.filter(function (i) { return i.sku === s; })[0].qty) + 1); }); });
-    qsa("[data-dec]", foot.parentElement).forEach(function (b) { b.addEventListener("click", function () { var s = b.getAttribute("data-dec"); setQty(s, (cart.filter(function (i) { return i.sku === s; })[0].qty) - 1); }); });
-    qsa("[data-rm]", foot.parentElement).forEach(function (b) { b.addEventListener("click", function () { setQty(b.getAttribute("data-rm"), 0); }); });
+    qsa("[data-inc]", items).forEach(function (b) { b.addEventListener("click", function () { var s = b.getAttribute("data-inc"); setQty(s, (cart.filter(function (i) { return i.sku === s; })[0].qty) + 1); }); });
+    qsa("[data-dec]", items).forEach(function (b) { b.addEventListener("click", function () { var s = b.getAttribute("data-dec"); setQty(s, (cart.filter(function (i) { return i.sku === s; })[0].qty) - 1); }); });
+    qsa("[data-rm]", items).forEach(function (b) { b.addEventListener("click", function () { setQty(b.getAttribute("data-rm"), 0); }); });
+    qsa("[data-rec-add]", items).forEach(function (b) { b.addEventListener("click", function () { addToCart(b.getAttribute("data-rec-add"), 1); }); });
   }
 
   /* ---------- compare render ---------- */
@@ -188,12 +243,45 @@
     }).join("");
     qsa("[data-cmp-rm]", items).forEach(function (b) { b.addEventListener("click", function () { toggleCompare(b.getAttribute("data-cmp-rm")); }); });
     bar.classList.toggle("show", compare.length > 0);
+    // keep suggestions in sync with current compare state
+    var cs = qs("[data-compare-search]");
+    renderCompareSuggest(cs ? cs.value : "");
+  }
+  /* type-ahead suggestion pills for compare (item #10): only after >=3 chars,
+     shows products not already being compared, each with a "+" to add. */
+  function renderCompareSuggest(qstr) {
+    var box = qs("[data-compare-suggest]"); if (!box) return;
+    var q = (qstr || "").trim().toLowerCase();
+    if (q.length < 3) { box.innerHTML = ""; box.classList.remove("show"); return; }
+    var matches = PRODUCTS.filter(function (p) {
+      if (compare.indexOf(p.sku) >= 0) return false;
+      var hay = (p.name + " " + p.shortName + " " + p.category).toLowerCase();
+      return hay.indexOf(q) >= 0;
+    }).slice(0, 6);
+    if (!matches.length) {
+      box.innerHTML = '<span class="cmp-nohit">No matches \u2014 try another name</span>';
+      box.classList.add("show"); return;
+    }
+    box.innerHTML = matches.map(function (p) {
+      var full = (compare.length >= 4);
+      return '<button class="cmp-pill" data-cmp-add="' + p.sku + '"' + (full ? ' disabled title="Compare up to 4"' : '') + '>' +
+        '<span class="plus">+</span>' + esc(p.shortName) + '</button>';
+    }).join("");
+    box.classList.add("show");
+    qsa("[data-cmp-add]", box).forEach(function (b) {
+      b.addEventListener("click", function () {
+        toggleCompare(b.getAttribute("data-cmp-add"));
+        var cs = qs("[data-compare-search]");
+        if (cs) { cs.value = ""; cs.focus(); }
+        renderCompareSuggest("");
+      });
+    });
   }
   function openCompare() {
     if (compare.length < 2) { toast("Pick at least 2 products to compare"); return; }
     var prods = compare.map(bySku);
     var rows = [
-      ["Price", function (p) { return '<strong>' + inr(p.price) + "</strong> <span style='color:#999;text-decoration:line-through'>" + inr(p.mrp) + "</span>"; }],
+      ["Price", function (p) { return '<strong>' + inr(p.price) + "</strong>" + (p.mrp > p.price ? " <span style='color:#999;text-decoration:line-through'>" + inr(p.mrp) + "</span>" : ""); }],
       ["EMI from", function (p) { return inr(p.emiPerMonth) + "/mo"; }],
       ["Category", function (p) { return p.category; }],
       ["Best for", function (p) { return p.bestFor.join(", ") || "\u2014"; }],
@@ -224,7 +312,7 @@
       '<a class="imgwrap" href="' + pageUrl(p) + '"><img src="' + p.image + '" alt="' + esc(p.shortName) + '" loading="lazy"></a>' +
       '<div class="body"><div class="cat">' + esc(p.category) + "</div>" +
       '<a class="name" href="' + pageUrl(p) + '">' + esc(p.name) + "</a>" +
-      '<div class="price"><span class="now">' + inr(p.price) + '</span><span class="was">' + inr(p.mrp) + '</span><span class="off">' + p.discount + "% off</span></div>" +
+      '<div class="price"><span class="now">' + inr(p.price) + '</span>' + (p.discount > 0 ? '<span class="was">' + inr(p.mrp) + '</span><span class="off">' + p.discount + "% off</span>" : "") + "</div>" +
       '<div class="emi">EMI from <b>' + inr(p.emiPerMonth) + "/mo</b></div>" +
       '<div class="card-best">' + p.bestFor.slice(0, 2).map(function (t) { return '<span class="mini">' + esc(t) + "</span>"; }).join("") + "</div>" +
       '<div class="card-cta"><a class="btn btn-primary btn-block" href="' + pageUrl(p) + '">View details</a></div>' +

@@ -96,7 +96,7 @@
       '<div class="announce"><span>MANAGED BY CINEBELS &nbsp;|&nbsp; AUTHORISED KLIPSCH DISTRIBUTOR &nbsp;|&nbsp; EMI &amp; COD AVAILABLE &nbsp;|&nbsp; FREE DELIVERY ABOVE \u20B91,000</span></div>' +
       '<header class="site"><div class="wrap nav">' +
       '<button class="menu-toggle" aria-label="Menu">\u2630</button>' +
-      '<a class="brand" href="index.html"><b>KLIPSCH</b> INDIA</a>' +
+      '<a class="brand" href="index.html" aria-label="Klipsch India home"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"><span class="brand-sub">INDIA</span></a>' +
       '<div class="search"><input type="text" placeholder="Search speakers, soundbars, subwoofers\u2026" aria-label="Search products"></div>' +
       '<nav class="nav-links">' + nav + "</nav>" +
       '<button class="cart-btn" data-open-cart aria-label="Open cart">Cart <span class="cart-count" data-cart-count>0</span></button>' +
@@ -104,7 +104,7 @@
   }
   function footer() {
     return '<footer class="site"><div class="wrap cols">' +
-      '<div><div class="brand" style="margin-bottom:10px"><b>KLIPSCH</b> INDIA</div>' +
+      '<div><div class="brand brand-footer" style="margin-bottom:10px"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"><span class="brand-sub">INDIA</span></div>' +
       '<p class="addr">Authorised India distributor<br>Cinerama Private Limited (Cinebels)<br>16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka 560022</p>' +
       '<p class="addr">Talk to us: +91 93413 30907</p></div>' +
       '<div><h5>Shop</h5><a href="category.html">All Products</a><a href="category.html?cat=Soundbar%20Speakers">Soundbars</a><a href="category.html?cat=Bluetooth%20Speakers">Bluetooth Speakers</a><a href="category.html?cat=Subwoofers">Subwoofers</a></div>' +

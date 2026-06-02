@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Klipsch India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<main>
+  <div class="checkout">
+    <div class="lock">&#128274; Secure checkout - your details are encrypted</div>
+
+    <div class="auth-card">
+      <h2>Sign in to continue</h2>
+      <p class="s">Faster checkout, order tracking and access to offers. Takes about 5 seconds.</p>
+
+      <!-- phone OTP: the India-default low-friction path -->
+      <div class="field">
+        <label>Mobile number</label>
+        <input type="tel" placeholder="10-digit mobile number" maxlength="10" data-phone>
+      </div>
+      <button class="btn btn-primary btn-block" data-otp>Get OTP</button>
+
+      <div class="or">or</div>
+      <button class="btn amazon-btn btn-block" data-amazon>Sign in with Amazon &nbsp;(saved addresses &amp; cards)</button>
+
+      <div class="guest-opts">
+        <button class="btn btn-ghost" style="flex:1" data-guest>Continue as guest</button>
+        <button class="btn btn-ghost" style="flex:1" data-cod>Pay on delivery (COD)</button>
+      </div>
+      <p class="login-note">You can browse and build your cart without signing in. Sign-in is only needed to place the order.</p>
+    </div>
+
+    <div class="summary" data-summary></div>
+
+    <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:18px">
+      This is a concept demo - no real order is placed and no payment is taken.
+    </p>
+  </div>
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/checkout.js"></script>
+</body>
+</html>

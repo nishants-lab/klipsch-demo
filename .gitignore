@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# screenshots / scratch
+*.png
+!assets/**/*.png
+
+# python
+__pycache__/
+*.pyc

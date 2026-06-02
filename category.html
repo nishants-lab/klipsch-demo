@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Klipsch - Speakers, Soundbars & Subwoofers | Klipsch India</title>
+<meta name="description" content="Browse the full Klipsch India range. Filter by use case, price and category. Genuine products with official warranty, EMI and COD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<main>
+  <section class="section">
+    <div class="wrap">
+      <h2 data-page-title>Shop all Klipsch</h2>
+      <p class="sub" data-page-sub>Genuine, warrantied products from India's authorised distributor.</p>
+
+      <div style="display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start" id="shop-layout">
+        <!-- filters -->
+        <aside style="border:1px solid var(--line);border-radius:14px;padding:16px" id="filters">
+          <h4 style="margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Use case</h4>
+          <div data-f-use></div>
+          <h4 style="margin:18px 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Category</h4>
+          <div data-f-cat></div>
+          <h4 style="margin:18px 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)">Price</h4>
+          <div data-f-price></div>
+          <button class="btn btn-ghost btn-block" style="margin-top:16px" data-clear-filters>Clear filters</button>
+        </aside>
+        <!-- results -->
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <span style="font-size:13px;color:var(--muted)" data-count></span>
+            <select data-sort style="border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-family:inherit;font-size:13px">
+              <option value="featured">Sort: Featured</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+              <option value="disc">Biggest discount</option>
+            </select>
+          </div>
+          <div class="grid" data-grid></div>
+          <p data-empty style="display:none;color:var(--muted);padding:30px 0">No products match these filters. <a href="category.html" style="color:var(--copper);font-weight:700">Reset</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/category.js"></script>
+</body>
+</html>

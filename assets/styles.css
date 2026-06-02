@@ -1,4 +1,4 @@
-/* Klipsch India CRO demo - shared styles
+﻿/* Klipsch India CRO demo - shared styles
    Brand-ish palette: Klipsch copper (#b5651d) on near-black, clean light surfaces. */
 :root{
   --copper:#b5651d; --copper-dark:#8a4d16; --ink:#111418; --muted:#5a6270;
@@ -60,7 +60,7 @@ header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px s
 .acct-btn:hover{color:var(--copper)}
 .acct-btn .acct-ico{display:block}
 
-/* Klisch New theme toggle */
+/* Klipsch New theme toggle */
 .theme-toggle{display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;padding:4px 2px}
 .theme-toggle .tt-track{width:38px;height:20px;border-radius:999px;background:#cfd3da;position:relative;transition:background .18s;flex:0 0 auto}
 .theme-toggle .tt-knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .18s}

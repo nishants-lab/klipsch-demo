@@ -1,4 +1,4 @@
-# The prompt journey — how this project was shaped
+﻿# The prompt journey — how this project was shaped
 
 This project (a conversion-focused concept rebuild of Klipsch India / Cinebels) was
 built entirely through a conversation with Kiro. This file captures every prompt given,
@@ -121,7 +121,7 @@ on GitHub Pages.
 the bar that defined the current state: fix real bugs, expand the catalog, justify the API
 story, add attach-oriented recommendations, upgrade compare, and — critically — **write a
 full test suite and verify everything works on desktop and mobile**. Item #9 (a local-only
-look-and-feel revision) seeded what became the "Klisch New" theme. Item #8's insight
+look-and-feel revision) seeded what became the "Klipsch New" theme. Item #8's insight
 (recommend *down*, not up) is now a core conversion principle in the cart.
 
 **Prompt 12**
@@ -162,7 +162,7 @@ and pushed to `main` — exactly the bar Prompt 11 had set.
 > if no, don't invent metrics. 5. Create a Quip with sections for #2, #3 and #4.
 
 *Why it mattered:* raised the project from "feature-complete" to **measured and defensible.**
-- The **"Klisch New" toggle** turned the local-only #9 idea into a shippable, A/B-able theme —
+- The **"Klipsch New" toggle** turned the local-only #9 idea into a shippable, A/B-able theme —
   with the explicit guardrail that it must be a *real CX/conversion* redesign and everything
   must keep working. It also closed the **missing-login** gap vs the original.
 - Asking for a **standard metric** (rather than letting Kiro invent one) is what brought in

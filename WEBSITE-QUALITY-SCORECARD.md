@@ -1,4 +1,4 @@
-# Website quality scorecard — is there a standard, and how do we score?
+﻿# Website quality scorecard — is there a standard, and how do we score?
 
 **Yes, there is an industry standard.** The widely accepted, vendor-neutral way to measure
 how a website "looks and functions" is **Google Lighthouse**, which scores four categories
@@ -24,7 +24,7 @@ straight Lighthouse output.
   settings for all three targets, so the comparison is like-for-like.
 - Targets:
   - **Classic demo** — `index.html?theme=classic` (served locally)
-  - **Klisch New demo** — `index.html?theme=new` (the new toggle)
+  - **Klipsch New demo** — `index.html?theme=new` (the new toggle)
   - **Live store** — `https://www.klipschindia.com/`
 - Reproduce: start a local server (`python -m http.server 8099`) and run
   `python scripts/run_lighthouse.py`. Raw JSON reports are in `build/lighthouse/`.
@@ -33,7 +33,7 @@ straight Lighthouse output.
 
 ## Scorecard (Lighthouse, desktop, 0–100)
 
-| Category | Existing site (klipschindia.com) | Demo — Classic | Demo — Klisch New |
+| Category | Existing site (klipschindia.com) | Demo — Classic | Demo — Klipsch New |
 |---|:--:|:--:|:--:|
 | **Performance** | 42 *(median of 41/42/44)* | **99** | **99** |
 | **Accessibility** | 73 | **90** | **90** |
@@ -42,7 +42,7 @@ straight Lighthouse output.
 
 ### Core Web Vitals & key load metrics
 
-| Metric (lower is better) | Existing site | Demo — Classic | Demo — Klisch New | Google "good" threshold |
+| Metric (lower is better) | Existing site | Demo — Classic | Demo — Klipsch New | Google "good" threshold |
 |---|:--:|:--:|:--:|:--:|
 | First Contentful Paint (FCP) | 1.0 s | 0.5 s | 0.5 s | < 1.8 s |
 | Largest Contentful Paint (LCP) | 1.2 s | 0.9 s | 0.9 s | < 2.5 s |
@@ -56,7 +56,7 @@ straight Lighthouse output.
 
 - **The demo (both themes) scores near-perfect and beats the live store in every category.**
   The biggest gaps are **Best Practices (100 vs 54)** and **Performance (99 vs 42)**.
-- **Classic and Klisch New score effectively identically.** That's by design and is the key
+- **Classic and Klipsch New score effectively identically.** That's by design and is the key
   takeaway: the "welcoming" redesign is **not** paid for in speed or stability — the denser
   catalog grid, warmer palette and stronger CTAs add zero performance or accessibility cost.
   So the new look is a free CX upgrade, not a trade-off.
@@ -77,7 +77,7 @@ straight Lighthouse output.
   rationale and (in production) real A/B/Weblab data.
 - The demo is a **static site with a small, embedded catalog**, so it has a structural speed
   advantage over a live SPA hitting real services. The fairest comparison is **like-for-like
-  within the demo** (Classic vs Klisch New), and **directionally** vs the live site for the
+  within the demo** (Classic vs Klipsch New), and **directionally** vs the live site for the
   deterministic categories (Accessibility, Best Practices, SEO) and for clear UX defects
   (CLS, TBT) that are independent of backend load.
 - Accessibility 90 is strong but not 100 — full WCAG conformance still requires manual testing
@@ -87,5 +87,5 @@ straight Lighthouse output.
 
 Against the one widely accepted standard for "how a website looks and functions," **both demo
 themes substantially outperform the existing klipschindia.com**, and the conversion-tuned
-"Klisch New" theme delivers that improved experience **at no measurable performance or
+"Klipsch New" theme delivers that improved experience **at no measurable performance or
 accessibility cost**.

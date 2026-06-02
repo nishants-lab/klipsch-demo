@@ -1,4 +1,4 @@
-# Klipsch India — CRO Concept Demo
+﻿# Klipsch India — CRO Concept Demo
 
 A static, shareable prototype of an **enhanced** Klipsch India (Cinebels) storefront,
 built to demonstrate conversion-rate-optimization (CRO) ideas for the team. It uses
@@ -31,7 +31,7 @@ The enhancements we discussed, built in as first-class features:
    sign-in, and true guest / COD paths. Auth is deferred until order placement. A
    header **Sign in** button + login modal (the live site's header has no login) keeps
    sign-in one tap away on every page.
-6. **"Klisch New" experience toggle** — a header switch that flips the whole site to a
+6. **"Klipsch New" experience toggle** — a header switch that flips the whole site to a
    CX/conversion-tuned redesign (denser, more scannable catalog grid; compacted hero;
    stronger CTAs; warmer palette; clearer price/trust hierarchy). The choice persists
    across pages and checkout. Lives in `assets/theme-new.css`, scoped under
@@ -76,7 +76,7 @@ klipsch-cro-demo/
 ├── checkout.html       # simulated checkout (phone OTP / Amazon / guest / COD)
 ├── assets/
 │   ├── styles.css      # all styles (brand-ish copper-on-dark theme; classic default)
-│   ├── theme-new.css   # "Klisch New" CX/conversion theme (html[data-theme="new"])
+│   ├── theme-new.css   # "Klipsch New" CX/conversion theme (html[data-theme="new"])
 │   ├── app.js          # shared logic: chrome, cart, compare, rules-engine helpers
 │   ├── data.js         # GENERATED catalog data (window.KLIPSCH_DATA)
 │   ├── home.js         # homepage logic + product finder

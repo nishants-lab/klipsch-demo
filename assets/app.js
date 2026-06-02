@@ -1,4 +1,4 @@
-/* Klipsch India CRO demo - shared app logic
+﻿/* Klipsch India CRO demo - shared app logic
    Pure vanilla JS, no build step. Works on GitHub Pages and from file://.
    State (cart, compare) persists in localStorage so it survives navigation. */
 (function () {
@@ -34,7 +34,7 @@
     { code: "AUDIO5", label: "Flat \u20B9500 off above \u20B95,000", flat: 500, min: 5000 }
   ];
 
-  /* ---------- theme (Klisch New toggle) ---------- */
+  /* ---------- theme (Klipsch New toggle) ---------- */
   // Inject the new-theme stylesheet once; it only takes effect when
   // <html data-theme="new"> is set, so it's inert in classic mode.
   function ensureThemeCss() {
@@ -133,8 +133,8 @@
       '<a class="brand" href="index.html" aria-label="Klipsch India home"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"></a>' +
       '<div class="search"><input type="text" placeholder="Search speakers, soundbars, subwoofers\u2026" aria-label="Search products"></div>' +
       '<nav class="nav-links">' + nav + "</nav>" +
-      '<button class="theme-toggle" data-theme-toggle role="switch" aria-checked="false" aria-label="Toggle Klisch New experience" title="Try the new Klipsch experience">' +
-      '<span class="tt-track"><span class="tt-knob"></span></span><span class="tt-label">Klisch New</span></button>' +
+      '<button class="theme-toggle" data-theme-toggle role="switch" aria-checked="false" aria-label="Toggle Klipsch New experience" title="Try the new Klipsch experience">' +
+      '<span class="tt-track"><span class="tt-knob"></span></span><span class="tt-label">Klipsch New</span></button>' +
       '<button class="acct-btn" data-open-login aria-label="Sign in">' +
       '<svg class="acct-ico" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path></svg>' +
       '<span class="acct-label" data-acct-label>Sign in</span></button>' +
@@ -205,12 +205,12 @@
     var s = qs(".search input");
     if (s) s.addEventListener("keydown", function (e) { if (e.key === "Enter") location.href = "category.html?q=" + encodeURIComponent(s.value); });
 
-    // Klisch New theme toggle
+    // Klipsch New theme toggle
     qsa("[data-theme-toggle]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         applyTheme(theme === "new" ? "classic" : "new");
         syncThemeToggle();
-        toast(theme === "new" ? "Klisch New experience on" : "Back to classic view");
+        toast(theme === "new" ? "Klipsch New experience on" : "Back to classic view");
       });
     });
     syncThemeToggle();

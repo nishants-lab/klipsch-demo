@@ -67,9 +67,15 @@ klipsch-cro-demo/
 │   ├── home.js         # homepage logic + product finder
 │   ├── category.js     # filters / sort
 │   ├── product.js      # PDP + buying guide rendering
-│   └── checkout.js     # simulated checkout
-└── build/
-    └── raw_products.json   # raw captured product data (input to the generator)
+│   ├── checkout.js     # simulated checkout
+│   └── img/
+│       ├── klipsch-logo.svg    # brand logo (header + footer)
+│       └── klipsch-logo.webp   # raster fallback
+├── build/
+│   └── raw_products.json       # raw captured product data (input to the generator)
+└── scripts/
+    ├── build_klipsch_data.py            # data generator (raw_products.json -> data.js)
+    └── klipsch-buying-guide-injector.js # standalone console snippet (inject guide on the LIVE site)
 ```
 
 ## Regenerating the data
@@ -79,7 +85,7 @@ Product data was captured from the live SmartBiz storefront API
 product info only). To rebuild `assets/data.js` after editing `build/raw_products.json`:
 
 ```bash
-python ../scripts/build_klipsch_data.py
+python scripts/build_klipsch_data.py
 ```
 
 The generator parses each product's description into structured specs + feature

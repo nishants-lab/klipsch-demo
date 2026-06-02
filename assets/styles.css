@@ -31,8 +31,12 @@ img{display:block;max-width:100%}
 .announce span{opacity:.9}
 header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:22px;height:64px}
-.brand{font-weight:800;font-size:20px;letter-spacing:.06em;color:var(--ink)}
+.brand{font-weight:800;font-size:20px;letter-spacing:.06em;color:var(--ink);display:flex;align-items:center;gap:9px}
 .brand b{color:var(--copper)}
+.brand-logo{height:34px;width:auto;display:block}
+.brand-sub{font-weight:800;font-size:15px;letter-spacing:.14em;color:var(--ink)}
+.brand-footer .brand-logo{height:30px}
+.brand-footer .brand-sub{color:var(--muted)}
 .nav .search{flex:1;max-width:420px;position:relative}
 .nav .search input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit}
 .nav-links{display:flex;gap:18px;margin-left:auto;font-size:14px;font-weight:600}

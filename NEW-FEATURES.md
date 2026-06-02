@@ -1,4 +1,4 @@
-# What's new in the Klipsch India CRO demo vs the live store
+﻿# What's new in the Klipsch India CRO demo vs the live store
 
 This concept demo (Cinebels / Klipsch India) rebuilds the storefront with
 conversion-focused enhancements that the live **klipschindia.com** does not have
@@ -53,8 +53,8 @@ and basket value without adding price friction at the decision moment.
 from intent ("I want big sound for parties") instead of a model list reduces bounce and
 gets the right products in front of them faster.
 
-### 5. "Klisch New" experience toggle + the missing login & low-friction sign-in
-- A header **"Klisch New" toggle** switches the whole site to a CX/conversion-tuned
+### 5. "Klipsch New" experience toggle + the missing login & low-friction sign-in
+- A header **"Klipsch New" toggle** switches the whole site to a CX/conversion-tuned
   redesign (denser, more scannable catalog grid; compacted hero so products are reachable
   sooner; stronger, higher-contrast CTAs; warmer, more welcoming palette; clearer price
   and trust hierarchy). The choice persists across pages and checkout.

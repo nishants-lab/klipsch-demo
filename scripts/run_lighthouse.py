@@ -1,9 +1,9 @@
-"""
+﻿"""
 run_lighthouse.py — run Google Lighthouse audits and print category scores.
 
 Standard, industry-recognised website quality metric (Performance, Accessibility,
 Best Practices, SEO; 0-100 each). Used here to objectively rate the demo (classic
-and Klisch New themes) against the live klipschindia.com store.
+and Klipsch New themes) against the live klipschindia.com store.
 
 Usage:  python scripts/run_lighthouse.py
 Requires: Node/npm (uses `npx lighthouse`), a local server on :8099 for the demo.

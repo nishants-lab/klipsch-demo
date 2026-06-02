@@ -1,4 +1,4 @@
-/* =====================================================================
+﻿/* =====================================================================
  * Klipsch India CRO Demo — Automated DOM Evals
  * ---------------------------------------------------------------------
  * HOW TO USE
@@ -745,7 +745,7 @@
       var newTheme = document.documentElement.getAttribute("data-theme") === "new";
       var exp;
       if (newTheme) {
-        // Klisch New uses a denser grid for discovery (5 cols desktop)
+        // Klipsch New uses a denser grid for discovery (5 cols desktop)
         exp = w <= 380 ? 2 : w <= 640 ? 2 : w <= 900 ? 3 : w <= 1100 ? 4 : 5;
       } else {
         exp = w <= 430 ? 1 : w <= 760 ? 2 : w <= 1024 ? 3 : 4;

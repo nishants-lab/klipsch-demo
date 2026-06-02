@@ -9,8 +9,8 @@
   document.querySelector("[data-title]").textContent = "Buy " + p.name + " | Klipsch India";
   var dEl = document.querySelector("[data-desc]"); if (dEl) dEl.setAttribute("content", p.shortName + " - genuine Klipsch with official warranty, EMI & COD from India's authorised distributor.");
 
-  /* ---- gallery: use the single product image as main + thumbs (demo) ---- */
-  var imgs = [p.image];
+  /* ---- gallery: use the product's real image gallery (falls back to single image) ---- */
+  var imgs = (p.gallery && p.gallery.length) ? p.gallery.slice(0, 6) : [p.image];
 
   /* ---- buying guide pieces (data already computed by build script) ---- */
   var bestChips = p.bestFor.map(function (t) { return '<span class="pill">' + esc(t) + '</span>'; }).join("");
@@ -45,8 +45,8 @@
     '<nav class="crumb"><a href="index.html">Home</a> / <a href="category.html?cat=' + encodeURIComponent(p.category) + '">' + esc(p.category) + '</a> / ' + esc(p.shortName) + '</nav>' +
     '<div class="pdp">' +
       // gallery
-      '<div class="gallery"><div class="main"><img src="' + p.image + '" alt="' + esc(p.shortName) + '" data-main-img></div>' +
-        '<div class="thumbs">' + imgs.map(function (s, i) { return '<div class="' + (i === 0 ? "active" : "") + '"><img src="' + s + '" alt="view ' + (i + 1) + '"></div>'; }).join("") + '</div>' +
+      '<div class="gallery"><div class="main"><img src="' + imgs[0] + '" alt="' + esc(p.shortName) + '" data-main-img></div>' +
+        '<div class="thumbs">' + imgs.map(function (s, i) { return '<div class="' + (i === 0 ? "active" : "") + '" data-thumb="' + i + '"><img src="' + s + '" alt="view ' + (i + 1) + '" loading="lazy"></div>'; }).join("") + '</div>' +
       '</div>' +
       // info column
       '<div class="info">' +
@@ -54,7 +54,7 @@
         '<div class="rating-row"><span class="stars">\u2605\u2605\u2605\u2605\u2605</span> <b>4.6</b> &middot; <a href="#reviews" style="color:var(--copper)">128 ratings</a> &middot; <span>Bestseller</span></div>' +
 
         // PRICE
-        '<div class="price-block"><span class="now">' + inr(p.price) + '</span><span class="was">' + inr(p.mrp) + '</span><span class="off">' + p.discount + '% off</span></div>' +
+        '<div class="price-block"><span class="now">' + inr(p.price) + '</span>' + (p.discount > 0 ? '<span class="was">' + inr(p.mrp) + '</span><span class="off">' + p.discount + '% off</span>' : '') + '</div>' +
         '<p class="incl">Inclusive of all taxes</p>' +
 
         // ===== BUYING GUIDE: QUICK VERDICT STRIP (directly below price) =====
@@ -62,14 +62,14 @@
           '<div class="hd">\uD83E\uDDED BUYING GUIDE \u00B7 QUICK VERDICT</div>' +
           '<div class="verdict">' + esc(p.verdict) + '</div>' +
           (p.bestFor.length ? '<div class="bf-label">BEST FOR</div><div>' + bestChips + '</div>' : "") +
-          '<div class="save">You save ' + inr(p.savings) + ' (' + p.discount + '% off MRP) on this purchase.</div>' +
+          (p.savings > 0 ? '<div class="save">You save ' + inr(p.savings) + ' (' + p.discount + '% off MRP) on this purchase.</div>' : '') +
           '<span class="jump" data-jump>\u2193 See full buying guide</span>' +
         '</div>' +
 
         // EMI + OFFERS
         '<div class="emi-offers">' +
           '<div class="box"><div class="lbl">EMI</div><div class="big">From ' + inr(p.emiPerMonth) + '/mo</div><div class="sm">12-mo, no-cost EMI on select cards</div></div>' +
-          '<div class="box"><div class="lbl">Offers</div><div class="big">' + eligible.length + ' available</div><div class="sm">Apply below - no coupon hunting</div></div>' +
+          '<div class="box"><div class="lbl">Offers</div><div class="big">' + eligible.length + ' available</div><div class="sm">Apply with one tap below</div></div>' +
         '</div>' +
         '<div data-offers>' + offerRows + '</div>' +
 
@@ -111,6 +111,16 @@
   document.querySelector("[data-buy]").addEventListener("click", function () { A.addToCart(p.sku, 1); location.href = "checkout.html"; });
   document.querySelector("[data-jump]").addEventListener("click", function () {
     document.getElementById("full-guide").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  /* gallery thumbnails -> swap main image */
+  var mainImg = document.querySelector("[data-main-img]");
+  Array.prototype.forEach.call(document.querySelectorAll("[data-thumb]"), function (th) {
+    th.addEventListener("click", function () {
+      var i = +th.getAttribute("data-thumb");
+      if (mainImg && imgs[i]) mainImg.src = imgs[i];
+      Array.prototype.forEach.call(document.querySelectorAll("[data-thumb]"), function (t) { t.classList.remove("active"); });
+      th.classList.add("active");
+    });
   });
   Array.prototype.forEach.call(document.querySelectorAll("[data-apply-offer]"), function (b) {
     b.addEventListener("click", function () {

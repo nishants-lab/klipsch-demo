@@ -78,9 +78,17 @@ window.KLIPSCH_DATA = {
       "discount": 19,
       "savings": 2800,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/Obxt1hyTlNCwAe3.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Obxt1hyTlNCwAe3.jpg",
+        "https://m.media-amazon.com/images/I/91QtjTg8j1L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81bKeQuVurL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/813hmP6ueyL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81fZUFlCylL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/9bxt1h29wOnVMp2.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
-      "inStock": true,
+      "inStock": false,
       "specs": [
         {
           "key": "Output Power",
@@ -162,6 +170,14 @@ window.KLIPSCH_DATA = {
       "discount": 18,
       "savings": 8100,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/Qbxt1hBPqIsexYn.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Qbxt1hBPqIsexYn.jpg",
+        "https://m.media-amazon.com/images/I/61JxHmRka+L._SL1200_.jpg",
+        "https://m.media-amazon.com/images/I/81tcaw2cx6L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81gNla8A9GL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61GJ83dfbDL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/nbxt1h$iYVYdqqr.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -190,7 +206,7 @@ window.KLIPSCH_DATA = {
       "features": [
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         },
         {
           "label": "Powerful Concert-Like Sound",
@@ -210,7 +226,7 @@ window.KLIPSCH_DATA = {
         },
         {
           "label": "Portable & Stylish",
-          "text": "Compact and travel-ready with a retro-inspired design."
+          "text": "Compact and travel-ready with a retro-inspired design that blends classic style with modern performance."
         }
       ],
       "form": "portable speaker",
@@ -242,6 +258,14 @@ window.KLIPSCH_DATA = {
       "discount": 18,
       "savings": 15500,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/Obxt1B-aR717bUM.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Obxt1B-aR717bUM.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Pbxt1hSpK3Ss$jD.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/abxt1RucqRA3z3x.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/6bxt1hR$-9LP33b.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/1bxt1xS3HB9fTZf.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/4bxt1h50Tn7ruZb.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -256,11 +280,11 @@ window.KLIPSCH_DATA = {
         },
         {
           "key": "Connectivity",
-          "val": "Bluetooth and HDMI-ARC for seamless streaming."
+          "val": "Bluetooth for seamless wireless streaming."
         },
         {
           "key": "Audio Output Mode",
-          "val": "Dolby Atmos surround sound."
+          "val": "Surround sound for an immersive experience."
         },
         {
           "key": "Country of Origin",
@@ -270,27 +294,31 @@ window.KLIPSCH_DATA = {
       "features": [
         {
           "label": "Co-Created Excellence",
-          "text": "Developed in collaboration with Onkyo, blending advanced audio engineering and trusted reliability."
+          "text": "Developed in collaboration with Onkyo, blending advanced audio engineering and trusted reliability for a powerful home entertainment experience."
         },
         {
           "label": "Immersive 3.1.2-Channel Soundbar",
-          "text": "Features advanced acoustics and proprietary sound technology for a complete, cinematic surround experience."
+          "text": "Features advanced acoustics and proprietary sound technology to create a complete, cinematic surround experience."
         },
         {
           "label": "Dolby Atmos Integration",
-          "text": "Two built-in elevation speakers for multidimensional, room-filling sound."
+          "text": "Equipped with two built-in elevation speakers for multidimensional, room-filling sound that brings every scene to life."
         },
         {
           "label": "Custom-Tuned Audio & Deep Bass",
-          "text": "Four 2.25” ceramic drivers and dual 4” built-in subwoofers for full-bodied bass—no external subwoofer needed."
+          "text": "Features four 2.25” ceramic drivers and dual 4” built-in subwoofers for full-bodied, distortion-free bass—no external subwoofer needed."
         },
         {
           "label": "Crystal-Clear Dialog Clarity",
-          "text": "Dedicated horn-loaded tweeter ensures crisp, distinct vocals."
+          "text": "Dedicated horn-loaded tweeter ensures crisp, distinct vocals so you catch every word, from quiet conversations to explosive action scenes."
+        },
+        {
+          "label": "Designed for Real Living Rooms",
+          "text": "Whether you’re watching a late-night drama, hosting match day, or streaming your favorite playlist — Flexus Core 200 adapts with clarity, depth, and control."
         },
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         }
       ],
       "form": "soundbar",
@@ -300,10 +328,6 @@ window.KLIPSCH_DATA = {
         "Wireless streaming"
       ],
       "jargon": [
-        {
-          "term": "HDMI-ARC",
-          "why": "Connects to your TV with one cable and syncs volume with the TV remote."
-        },
         {
           "term": "Dolby Atmos",
           "why": "Adds height / overhead sound for a 3D, cinema-style effect."
@@ -322,14 +346,22 @@ window.KLIPSCH_DATA = {
     },
     {
       "sku": "3795c32f-ed14-4e1f-9ce8-8e5e926f7b7d",
-      "name": "Flexus Sub 100 Wireless Subwoofer for Core Series Soundbars with Deep Bass Output",
+      "name": "Flexus Sub 100 Wireless Subwoofer for Core Series Soundbars with Deep  Bass Output",
       "shortName": "Flexus Sub 100 Wireless Subwoofer for Core Series Soundbars",
-      "category": "Subwoofers",
+      "category": "Soundbar Speakers",
       "mrp": 57600,
       "price": 46800,
       "discount": 18,
       "savings": 10800,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/Cbxt1hIAuRidgRB.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Cbxt1hIAuRidgRB.jpg",
+        "https://m.media-amazon.com/images/I/71i+xWaancL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Fbxt1xVTmQZNwsX.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/5bxt1hXGdcnw--a.jpg",
+        "https://m.media-amazon.com/images/I/71HX3+ExV1L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/zbxt1Rd6lyrieil.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -376,6 +408,14 @@ window.KLIPSCH_DATA = {
       "discount": 36,
       "savings": 14400,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/Abxt1R2fZq-$xCB.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Abxt1R2fZq-$xCB.jpg",
+        "https://m.media-amazon.com/images/I/71FYv29dVKL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81OUeEW7y8L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/91yPvRAuWBL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81ULxjSbB8L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/ibxt1RVkIzuMkwH.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -404,15 +444,15 @@ window.KLIPSCH_DATA = {
         },
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         },
         {
           "label": "Powerful Audio Output",
-          "text": "Room-filling sound with dual 6.5” woofers and dual 2” tweeters for crisp highs and deep bass."
+          "text": "Delivers room-filling sound with dual 6.5” woofers and dual 2” tweeters for crisp highs and deep, rich bass."
         },
         {
           "label": "Dynamic Light Show & Strobe",
-          "text": "Multiple color modes, vibrant light rings, and strobes that sync to your music; Bass Boost for extra impact."
+          "text": "Multiple color modes, vibrant light rings, and strobes that sync to your music; activate Bass Boost for extra impact."
         },
         {
           "label": "Karaoke & Instrument Ready",
@@ -420,11 +460,11 @@ window.KLIPSCH_DATA = {
         },
         {
           "label": "Effortless Bluetooth Pairing",
-          "text": "Instantly connect and pair two Gig XXLs for true stereo."
+          "text": "Instantly connect your devices and pair two Gig XXLs for a true stereo experience."
         },
         {
           "label": "Long-Lasting Playtime",
-          "text": "Up to 8 hours of continuous music on a single charge."
+          "text": "Enjoy up to 8 hours of continuous music on a single charge."
         }
       ],
       "form": "party speaker",
@@ -448,6 +488,14 @@ window.KLIPSCH_DATA = {
       "discount": 25,
       "savings": 7950,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/Cbxt1R5LFiGTYX3.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Cbxt1R5LFiGTYX3.jpg",
+        "https://m.media-amazon.com/images/I/61zQrnN066L._SL1359_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Gbxt1B4hm-ltcoU.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/hbxt1BwdBYn1M4w.jpg",
+        "https://m.media-amazon.com/images/I/61R5+HcnxqL._SL1320_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/lbxt1BbMHlJiEYB.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -476,23 +524,23 @@ window.KLIPSCH_DATA = {
       "features": [
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         },
         {
           "label": "Legendary Portable Sound",
-          "text": "Stream music wirelessly and turn any gathering—beach, bonfire, or backyard—into an instant party."
+          "text": "Stream music wirelessly from any Bluetooth-enabled device and turn any gathering—beach, bonfire, or backyard—into an instant party."
         },
         {
           "label": "Compact Yet Powerful",
-          "text": "Dual 2.5” full-range drivers and dual 3” passive radiators deliver crisp highs and deep bass with 40W peak power."
+          "text": "Dual 2.5” full-range drivers and dual 3” passive radiators deliver crisp highs and deep, rich bass with 40W peak power."
         },
         {
           "label": "All-Day Battery Life",
-          "text": "Up to 16.5 hours of uninterrupted playtime with high-performance lithium-ion battery."
+          "text": "Enjoy up to 16.5 hours of uninterrupted playtime with the high-performance lithium-ion battery—music that lasts from sunrise to sunset."
         },
         {
           "label": "Splash-Resistant Design",
-          "text": "IPX4-rated protection against splashes, rain, and outdoor elements—perfect for poolside or patio."
+          "text": "IPX4-rated protection ensures the Groove XL stands strong against splashes, rain, and outdoor elements, perfect for poolside or patio fun."
         }
       ],
       "form": "party speaker",
@@ -529,6 +577,14 @@ window.KLIPSCH_DATA = {
       "discount": 18,
       "savings": 23100,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/nbxt1RtRMHpfVGo.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/nbxt1RtRMHpfVGo.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Ybxt1BU7kUBP856.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/xbxt1BugSOm9bNz.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/wbxt1BLdA6bDkqY.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Ebxt1hwDbgRFYNG.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/4bxt1RY2jUpgDhe.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -539,7 +595,7 @@ window.KLIPSCH_DATA = {
         },
         {
           "key": "Connectivity Technology",
-          "val": "HDMI-ARC, Bluetooth 5, optical, RCA, USB, phono"
+          "val": "Wired"
         },
         {
           "key": "Audio Output Mode",
@@ -551,7 +607,7 @@ window.KLIPSCH_DATA = {
         },
         {
           "key": "Versatile Connectivity",
-          "val": "HDMI-ARC, Bluetooth 5, digital optical, analog RCA, USB, phono preamp, and subwoofer output."
+          "val": "Offers HDMI-ARC, Bluetooth 5, digital optical, analog RCA, USB inputs, and a phono preamp, along with a subwoofer output for flexible setup options."
         }
       ],
       "features": [
@@ -561,23 +617,23 @@ window.KLIPSCH_DATA = {
         },
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         },
         {
           "label": "Enhanced TV Audio",
-          "text": "Immersive, high-definition sound that connects directly to your TV via HDMI-ARC."
+          "text": "Delivers immersive, high-definition sound that connects directly to your TV for an upgraded home entertainment experience."
         },
         {
           "label": "Acoustic Horn-Loaded Technology",
-          "text": "Powerful, room-filling soundstage with superior clarity and detail."
+          "text": "Provides a powerful, room-filling soundstage with advanced horn-loaded design for superior clarity and detail."
         },
         {
           "label": "Dynamic Bass Equalization",
-          "text": "Deep, impactful bass at every volume level."
+          "text": "Ensures deep, impactful bass at every volume level for a richer listening experience."
         },
         {
           "label": "High-Resolution Audio Support",
-          "text": "192kHz/24-bit decoding for crystal-clear, high-fidelity sound."
+          "text": "Equipped with 192kHz/24-bit decoding for crystal-clear, high-fidelity sound reproduction."
         }
       ],
       "form": "subwoofer",
@@ -622,6 +678,14 @@ window.KLIPSCH_DATA = {
       "discount": 18,
       "savings": 7400,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/Rbxt1xnKjUDVM4w.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Rbxt1xnKjUDVM4w.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/8bxt1hdPaLGwxlD.jpg",
+        "https://m.media-amazon.com/images/I/619HxH-wEVL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Jbxt1hM8gus8oXb.jpg",
+        "https://m.media-amazon.com/images/I/61ABFOPItXL._SL1200_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/rbxt1BLbimrOopq.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -632,7 +696,7 @@ window.KLIPSCH_DATA = {
         },
         {
           "key": "Connectivity Technology",
-          "val": "Bluetooth, Phono input"
+          "val": "Bluetooth"
         },
         {
           "key": "Audio Output Mode",
@@ -650,27 +714,27 @@ window.KLIPSCH_DATA = {
       "features": [
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         },
         {
           "label": "Luxury Design",
-          "text": "Real wood veneer and tactile switches, blending classic Klipsch heritage with modern technology."
+          "text": "Features real wood veneer and tactile switches, blending classic Klipsch heritage with modern technology."
         },
         {
           "label": "Big Sound",
-          "text": "Bi-amplified 2.1 stereo system with two 2.25” full-range drivers and a 4.5” high-excursion woofer."
+          "text": "Bi-amplified 2.1 stereo system with two 2.25” full-range drivers and a 4.5” high-excursion woofer for crystal-clear performance and powerful bass."
         },
         {
           "label": "Wireless Streaming",
-          "text": "Bluetooth 5.3 streaming from up to 40 feet away."
+          "text": "Bluetooth 5.3 enables streaming from up to 40 feet away."
         },
         {
           "label": "Customizable Control",
-          "text": "Adjust EQ, save presets, and update firmware via the Klipsch Connect App."
+          "text": "Adjust EQ settings, save presets, and access firmware updates via the Klipsch Connect App."
         },
         {
           "label": "Compact & Versatile",
-          "text": "12” W x 6.39” D x 6” H, easy to place anywhere."
+          "text": "Measures 12” W x 6.39” D x 6” H, making it easy to place anywhere while delivering impressive audio."
         }
       ],
       "form": "speaker",
@@ -719,17 +783,25 @@ window.KLIPSCH_DATA = {
       "discount": 18,
       "savings": 7400,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/5bxt1x5I1nrokVd.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/5bxt1x5I1nrokVd.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Ubxt1x7$6pA6Ea1.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Kbxt1x1TL4-AY84.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/wbxt1xeIrUTcrr9.jpg",
+        "https://m.media-amazon.com/images/I/71OTYZZwi4L._SL1200_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/jbxt1hEBNtPLcZI.jpg"
+      ],
       "color": "Walnut",
       "isBestSeller": true,
       "inStock": true,
       "specs": [
         {
           "key": "Speaker Maximum Output Power",
-          "val": "100 Watts"
+          "val": "6 Watts"
         },
         {
           "key": "Connectivity Technology",
-          "val": "Bluetooth, HDMI-ARC, Phono"
+          "val": "Bluetooth"
         },
         {
           "key": "Audio Output Mode",
@@ -747,35 +819,35 @@ window.KLIPSCH_DATA = {
       "features": [
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         },
         {
           "label": "Luxury Design",
-          "text": "Real wood veneer and tactile switches, combining classic Klipsch heritage with modern technology."
+          "text": "Features real wood veneer and tactile switches, combining classic Klipsch heritage with modern technology."
         },
         {
           "label": "Impressive Sound",
-          "text": "Compact 2.1 stereo system with two 2.25” full-range drivers and a 4.5” high-excursion woofer."
+          "text": "Compact 2.1 stereo system with two 2.25” full-range drivers and a 4.5” high-excursion woofer delivering clear audio and rich bass."
         },
         {
           "label": "Wireless Streaming",
-          "text": "Bluetooth 5.3 streaming from up to 40 feet away."
+          "text": "Bluetooth 5.3 enables streaming from up to 40 feet away."
         },
         {
           "label": "Customizable Control",
-          "text": "Adjust EQ, save presets, and update firmware via the Klipsch Connect App."
+          "text": "Adjust EQ settings, save presets, and access firmware updates via the Klipsch Connect App."
         },
         {
           "label": "Compact & Versatile",
-          "text": "12” W x 6.39” D x 6” H, easy to place anywhere."
+          "text": "Measures 12” W x 6.39” D x 6” H, easy to place anywhere while delivering high-quality sound."
         }
       ],
       "form": "speaker",
       "bestFor": [
         "TV & movies",
-        "Vinyl & turntables",
         "Music & stereo listening",
-        "Wireless streaming"
+        "Wireless streaming",
+        "Critical / Hi-Res listening"
       ],
       "jargon": [
         {
@@ -785,10 +857,6 @@ window.KLIPSCH_DATA = {
         {
           "term": "HDMI-ARC",
           "why": "Connects to your TV with one cable and syncs volume with the TV remote."
-        },
-        {
-          "term": "Phono input",
-          "why": "Plug a turntable in directly - no separate phono preamp needed."
         },
         {
           "term": "Full-range driver",
@@ -801,9 +869,13 @@ window.KLIPSCH_DATA = {
         {
           "term": "Adjustable EQ",
           "why": "Tune bass, mids and treble to taste, usually via the companion app."
+        },
+        {
+          "term": "2.1 / Bi-amplified",
+          "why": "Separate amps for woofer and drivers - cleaner, more powerful sound."
         }
       ],
-      "verdict": "A compact, easy-to-carry speaker, best suited for tv & movies and vinyl & turntables.",
+      "verdict": "A compact, easy-to-carry speaker, best suited for tv & movies and music & stereo listening.",
       "emiPerMonth": 2650
     },
     {
@@ -816,6 +888,14 @@ window.KLIPSCH_DATA = {
       "discount": 18,
       "savings": 38100,
       "image": "https://m.media-amazon.com/images/X/bxt1/M/ibxt1RDXBQ3hoYl.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/ibxt1RDXBQ3hoYl.jpg",
+        "https://m.media-amazon.com/images/I/51JRPRe6N3L._SL1100_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/4bxt1hRSpoPzdWJ.jpg",
+        "https://m.media-amazon.com/images/I/71x4wb7gz9L._SL1200_.jpg",
+        "https://m.media-amazon.com/images/I/61OGVOjR6pL._SL1230_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Ybxt1BtkiHOsQem.jpg"
+      ],
       "color": "Black",
       "isBestSeller": true,
       "inStock": true,
@@ -825,12 +905,8 @@ window.KLIPSCH_DATA = {
           "val": "400 Watts"
         },
         {
-          "key": "Connectivity Technology",
-          "val": "HDMI-ARC, Bluetooth, Phono, USB"
-        },
-        {
           "key": "Subwoofer Diameter",
-          "val": "8 Inches (built-in)"
+          "val": "8 Inches"
         },
         {
           "key": "Country of Origin",
@@ -839,12 +915,16 @@ window.KLIPSCH_DATA = {
       ],
       "features": [
         {
+          "label": "Model Name",
+          "text": "Klipsch-B0BQNBPBMS-5"
+        },
+        {
           "label": "Speaker Type",
-          "text": "Powered Stereo Pair"
+          "text": "Other"
         },
         {
           "label": "Imported by",
-          "text": "Cinerama Private Limited, Bengaluru, Karnataka, 560022"
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
         },
         {
           "label": "Heritage-Inspired Design",
@@ -852,19 +932,375 @@ window.KLIPSCH_DATA = {
         },
         {
           "label": "Powerful Performance",
-          "text": "400W of peak output for clear, dynamic sound."
+          "text": "Delivers 400W of peak output for clear, dynamic sound."
         },
         {
           "label": "Integrated Subwoofer",
-          "text": "8-inch woofer provides deep, rich bass."
+          "text": "8-inch subwoofer provides deep, rich bass."
         },
         {
-          "label": "High-Res Audio",
-          "text": "24-bit decoding and Tractrix Horn for detailed, efficient sound."
+          "label": "Versatile Placement",
+          "text": "Sleek Black Ash finish fits seamlessly into any home setup."
         },
         {
           "label": "Pair Configuration",
           "text": "Sold as a pair for immersive stereo sound."
+        }
+      ],
+      "form": "subwoofer",
+      "bestFor": [
+        "TV & movies",
+        "Adding bass / home theatre",
+        "Music & stereo listening",
+        "Critical / Hi-Res listening"
+      ],
+      "jargon": [
+        {
+          "term": "HDMI-ARC",
+          "why": "Connects to your TV with one cable and syncs volume with the TV remote."
+        },
+        {
+          "term": "Tractrix Horn",
+          "why": "Klipsch's signature design for clear, detailed, efficient sound."
+        },
+        {
+          "term": "Hi-Res / 24-bit audio",
+          "why": "Decodes studio-quality files with more detail than standard streaming."
+        }
+      ],
+      "verdict": "A premium, high-performance subwoofer, best suited for tv & movies and adding bass / home theatre.",
+      "emiPerMonth": 13733
+    },
+    {
+      "sku": "6922c13f-3569-4506-b754-2e23a9512135",
+      "name": "Nashville Portable Bluetooth 5.3 Speaker with 24-Hr Battery & Custom EQ via App",
+      "shortName": "Nashville Portable Bluetooth 5.3 Speaker",
+      "category": "Bluetooth Speakers",
+      "mrp": 22100,
+      "price": 17900,
+      "discount": 19,
+      "savings": 4200,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/bbxt1xIPIitfeFb.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/bbxt1xIPIitfeFb.jpg",
+        "https://m.media-amazon.com/images/I/81tXOUF2oyL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81ZZKCl1lML._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/91i4DY16svL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/81XXoNQIfPL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/6bxt1xRVnkwmbbO.jpg"
+      ],
+      "color": "Black",
+      "isBestSeller": false,
+      "inStock": true,
+      "specs": [
+        {
+          "key": "Maximum Output Power",
+          "val": "10 Watts for rich, balanced audio."
+        },
+        {
+          "key": "Frequency Response",
+          "val": "Up to 20 KHz for clear, detailed sound."
+        },
+        {
+          "key": "Connectivity",
+          "val": "Bluetooth 5.3 for seamless, wireless performance."
+        },
+        {
+          "key": "Audio Output Mode",
+          "val": "Surround sound for an immersive experience."
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        }
+      ],
+      "features": [
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "Personalized Sound Control",
+          "text": "Customize EQ settings for bass, mids, and treble through the Klipsch Connect app, access firmware updates, and get direct support—all in one place."
+        },
+        {
+          "label": "Seamless Wireless Connection",
+          "text": "Enjoy true wireless stereo playback with Bluetooth 5.3 technology and stay connected up to 40 feet for total listening freedom."
+        },
+        {
+          "label": "All-Day Power",
+          "text": "Keep the music going with up to 24 hours of battery life on a single charge—perfect for road trips, parties, or long days out."
+        },
+        {
+          "label": "Party Mode Enabled",
+          "text": "Use Broadcast Mode to sync and play music across 10+ compatible speakers for the ultimate shared experience."
+        },
+        {
+          "label": "Quick Charge & Power Share",
+          "text": "Recharge quickly with 18W USB-C fast charging, or use reverse USB-C (10W) to top up your phone or other devices on the go."
+        }
+      ],
+      "form": "party speaker",
+      "bestFor": [
+        "Parties & gatherings",
+        "Travel & outdoors",
+        "Music & stereo listening",
+        "Wireless streaming"
+      ],
+      "jargon": [
+        {
+          "term": "Bluetooth 5.x",
+          "why": "Latest wireless standard - stable pairing and longer range than older Bluetooth."
+        },
+        {
+          "term": "Adjustable EQ",
+          "why": "Tune bass, mids and treble to taste, usually via the companion app."
+        }
+      ],
+      "verdict": "A compact, easy-to-carry party speaker, best suited for parties & gatherings and travel & outdoors.",
+      "emiPerMonth": 1492
+    },
+    {
+      "sku": "9fda6370-a586-4d49-90d3-7a69ee839090",
+      "name": "RP-600M II  Bookshelf Speakers with Titanium Tweeter, Tractrix Horn & Cerametallic Woofer",
+      "shortName": "RP-600M II  Bookshelf Speakers",
+      "category": "Bookshelf Speakers",
+      "mrp": 99800,
+      "price": 99800,
+      "discount": 0,
+      "savings": 0,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/Lbxt1RHETmnKLOf.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Lbxt1RHETmnKLOf.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/sbxt1Bk7tNpen7e.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Zbxt1RKFyVuj-zm.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Fbxt1x4Al2NFfzM.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Pbxt1xcbfA-O5Wr.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/6bxt1xsaB0TU-tg.jpg"
+      ],
+      "color": "Black",
+      "isBestSeller": false,
+      "inStock": true,
+      "specs": [
+        {
+          "key": "Maximum Output Power",
+          "val": "400 Watts for rich, dynamic sound performance."
+        },
+        {
+          "key": "Connectivity Technology",
+          "val": "Wired for pure, uninterrupted audio transmission."
+        },
+        {
+          "key": "Audio Output Mode",
+          "val": "Surround sound for an immersive listening experience."
+        },
+        {
+          "key": "Mounting Type",
+          "val": "Shelf mount for versatile placement in any setup."
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        }
+      ],
+      "features": [
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "Enhanced Tractrix Horn Design",
+          "text": "A larger 90° x 90° silicone composite hybrid horn ensures clearer, more precise sound across all frequencies."
+        },
+        {
+          "label": "Titanium LTS Tweeter",
+          "text": "Linear Travel Suspension (LTS) titanium diaphragm tweeter minimizes distortion, delivering crisp and detailed highs."
+        },
+        {
+          "label": "Vented Tweeter Housing",
+          "text": "Improves sound clarity and enhances overall detail for a natural listening experience."
+        },
+        {
+          "label": "Redesigned Cerametallic Woofers",
+          "text": "Engineered for exceptional efficiency and minimal distortion, providing flawless, balanced sound."
+        },
+        {
+          "label": "Optimized Tractrix Ports",
+          "text": "Ensures smooth airflow and powerful, clean bass response with reduced turbulence."
+        },
+        {
+          "label": "Bi-Wiring/Bi-Amping Support",
+          "text": "Dual input terminals allow separation of frequency currents to minimize distortion and improve audio precision."
+        },
+        {
+          "label": "Premium Build & Finish",
+          "text": "Crafted with furniture-grade materials and finishes, these speakers are both powerful and visually stunning."
+        },
+        {
+          "label": "Magnetic Removable Grilles",
+          "text": "Easily switch between a modern, minimalist look or a bold, exposed-cone style."
+        },
+        {
+          "label": "Included in the Box",
+          "text": "(2) RP-600M II Bookshelf Speakers."
+        }
+      ],
+      "form": "bookshelf speaker",
+      "bestFor": [
+        "Travel & outdoors",
+        "Music & stereo listening"
+      ],
+      "jargon": [
+        {
+          "term": "Tractrix Horn",
+          "why": "Klipsch's signature design for clear, detailed, efficient sound."
+        }
+      ],
+      "verdict": "A compact, easy-to-carry bookshelf speaker, best suited for travel & outdoors and music & stereo listening.",
+      "emiPerMonth": 8317
+    },
+    {
+      "sku": "9746608b-68d6-4da7-8052-c59a4751a5cb",
+      "name": "R-50PM Powered Bluetooth Bookshelf Speakers with Horn Technology & Premium Sound",
+      "shortName": "R-50PM Powered Bluetooth Bookshelf Speakers",
+      "category": "Powered Bookshelf Speakers",
+      "mrp": 89600,
+      "price": 72800,
+      "discount": 18,
+      "savings": 16800,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/xbxt1hElSh4SINm.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/xbxt1hElSh4SINm.jpg",
+        "https://smartpos.amazon.in/images/62469/6ee5e671_1763987393483.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/8bxt1hqHDoxv2G9.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/jbxt1B9TNhKv3WD.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Zbxt1haBKykfdga.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/Lbxt1hut-PmhGHQ.jpg"
+      ],
+      "color": "Black",
+      "isBestSeller": false,
+      "inStock": true,
+      "specs": [
+        {
+          "key": "Maximum Output Power",
+          "val": "100 Watts for clear, dynamic sound."
+        },
+        {
+          "key": "Connectivity",
+          "val": "RCA and Bluetooth options for versatile audio input."
+        },
+        {
+          "key": "Audio Output Mode",
+          "val": "Stereo for balanced, high-quality playback."
+        },
+        {
+          "key": "Mounting Type",
+          "val": "Tabletop mount for convenient and stable setup."
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        }
+      ],
+      "features": [
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "Easy Plug & Play Setup",
+          "text": "No AVR required — simply connect to power, pair the speakers, and stream effortlessly via Bluetooth or wired input for instant premium sound."
+        },
+        {
+          "label": "Expansive Soundstage",
+          "text": "Larger edge-to-edge Tractrix® horns paired with 1” aluminum LTS tweeters deliver wider coverage, pristine clarity, and distortion-free high-volume performance."
+        },
+        {
+          "label": "Iconic Design, Modern Appeal",
+          "text": "Copper-spun TCP woofers with angled cones enhance accuracy and rigidity, while low-profile magnetic grilles let you choose between bold copper accents or a sleek, minimalist black finish."
+        }
+      ],
+      "form": "powered bookshelf speaker",
+      "bestFor": [
+        "Music & stereo listening",
+        "Wireless streaming"
+      ],
+      "jargon": [
+        {
+          "term": "Tractrix Horn",
+          "why": "Klipsch's signature design for clear, detailed, efficient sound."
+        }
+      ],
+      "verdict": "A compact, easy-to-carry powered bookshelf speaker, best suited for music & stereo listening and wireless streaming.",
+      "emiPerMonth": 6067
+    },
+    {
+      "sku": "dffa2ac0-220c-43a1-8b19-c9dcbaa9c8cd",
+      "name": "Klipsch The Fives Walnut | Powered Bookshelf Speakers with HDMI-ARC, Phono Input & High-Res Sound – Walnut Finish",
+      "shortName": "Klipsch The Fives Walnut",
+      "category": "Powered Bookshelf Speakers",
+      "mrp": 122900,
+      "price": 99800,
+      "discount": 18,
+      "savings": 23100,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/rbxt1RZIayjDzWV.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/rbxt1RZIayjDzWV.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/wbxt1B2XJ77lmbk.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Cbxt1xa6JrTb36K.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Fbxt1xPDT8EF6mR.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Gbxt1hk11yf6kZr.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Ubxt1hX9Zxnz$F2.jpg"
+      ],
+      "color": "Walnut",
+      "isBestSeller": false,
+      "inStock": true,
+      "specs": [
+        {
+          "key": "Speaker Maximum Output Power",
+          "val": "25 Watts"
+        },
+        {
+          "key": "Connectivity Technology",
+          "val": "Bluetooth"
+        },
+        {
+          "key": "Audio Output Mode",
+          "val": "Stereo"
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        },
+        {
+          "key": "Multiple Connectivity Options",
+          "val": "Features HDMI-ARC, Bluetooth 5, digital optical, analog RCA, USB inputs, and a built-in phono preamp with subwoofer output for versatile setup flexibility."
+        }
+      ],
+      "features": [
+        {
+          "label": "Input Voltage",
+          "text": "240 Volts"
+        },
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "Enhanced TV Audio",
+          "text": "Experience immersive, high-definition sound by connecting directly to your TV for a cinematic audio upgrade."
+        },
+        {
+          "label": "Acoustic Horn-Loaded Technology",
+          "text": "Delivers a spacious, detailed soundstage with precision and clarity through advanced horn-loaded design."
+        },
+        {
+          "label": "Dynamic Bass Equalization",
+          "text": "Provides deep, powerful bass response at all volume levels for a full-bodied listening experience."
+        },
+        {
+          "label": "High-Resolution Audio",
+          "text": "Supports 192kHz/24-bit decoding for crystal-clear, high-fidelity playback of your favorite tracks."
         }
       ],
       "form": "subwoofer",
@@ -875,6 +1311,10 @@ window.KLIPSCH_DATA = {
         "Music & stereo listening"
       ],
       "jargon": [
+        {
+          "term": "Bluetooth 5.x",
+          "why": "Latest wireless standard - stable pairing and longer range than older Bluetooth."
+        },
         {
           "term": "HDMI-ARC",
           "why": "Connects to your TV with one cable and syncs volume with the TV remote."
@@ -892,8 +1332,382 @@ window.KLIPSCH_DATA = {
           "why": "Decodes studio-quality files with more detail than standard streaming."
         }
       ],
-      "verdict": "A premium, high-performance subwoofer, best suited for tv & movies and vinyl & turntables.",
-      "emiPerMonth": 13733
+      "verdict": "A well-rounded subwoofer, best suited for tv & movies and vinyl & turntables.",
+      "emiPerMonth": 8317
+    },
+    {
+      "sku": "c88fddaa-e75d-4e73-aecd-d88b66536476",
+      "name": "RP-1000SW Reference Premiere Subwoofer with Cerametallic Driver & Class D Amp",
+      "shortName": "RP-1000SW Reference Premiere Subwoofer",
+      "category": "Subwoofers",
+      "mrp": 139800,
+      "price": 139800,
+      "discount": 0,
+      "savings": 0,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/cbxt1RnKLyaTHWM.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/cbxt1RnKLyaTHWM.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/5bxt1ReXti07qdz.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Ebxt1hsVDg4K9Wo.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/fbxt1xk24CqY$i5.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Jbxt1RywWWa--8O.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/1bxt1xGTid3mKzX.jpg"
+      ],
+      "color": "Black",
+      "isBestSeller": false,
+      "inStock": true,
+      "specs": [
+        {
+          "key": "Maximum Output Power",
+          "val": "500 Watts for dynamic, room-filling audio."
+        },
+        {
+          "key": "Connectivity Technology",
+          "val": "Bluetooth for seamless wireless streaming."
+        },
+        {
+          "key": "Audio Output Mode",
+          "val": "Surround for immersive, cinematic sound."
+        },
+        {
+          "key": "Mounting Type",
+          "val": "Floor standing for powerful, stable performance."
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        }
+      ],
+      "features": [
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "Advanced Acoustic Engineering",
+          "text": "Features state-of-the-art technology for exceptional sound clarity, precision, and power—among the finest ever crafted in the lineup."
+        },
+        {
+          "label": "Perfectly Balanced Performance",
+          "text": "Expertly tuned for ideal harmony between amplifier strength, driver efficiency, and cabinet design to deliver deep, detailed low frequencies."
+        },
+        {
+          "label": "Redesigned Cerametallic Drivers",
+          "text": "Engineered from the ground up for enhanced bass response, power, and efficiency across all frequencies."
+        },
+        {
+          "label": "High-Efficiency Class D Amplifier",
+          "text": "Combines an analog preamp for cleaner sound with a Class D power stage that maximizes output and performance."
+        },
+        {
+          "label": "Thunderous Bass, Anywhere",
+          "text": "Front-firing driver and Aerofoil front slot port reduce turbulence, delivering tight, accurate bass wherever placed."
+        },
+        {
+          "label": "Premium Design Details",
+          "text": "Crafted with a scratch-resistant ebony finish, rounded corners, rubber feet, steel grille posts, and woven cloth grille for a refined, durable look."
+        }
+      ],
+      "form": "subwoofer",
+      "bestFor": [
+        "Adding bass / home theatre",
+        "Wireless streaming"
+      ],
+      "jargon": [],
+      "verdict": "A premium, high-performance subwoofer, best suited for adding bass / home theatre and wireless streaming.",
+      "emiPerMonth": 11650
+    },
+    {
+      "sku": "d10f27c0-006c-4fae-91fe-1fc18625083f",
+      "name": "Klipsch The Three Plus Matte Black | Bluetooth 5.3 2.1 Speaker with 5.25” Woofer, Phono Input & Heritage Design – Black",
+      "shortName": "Klipsch The Three Plus Matte Black",
+      "category": "Bluetooth Speakers",
+      "mrp": 63800,
+      "price": 51800,
+      "discount": 18,
+      "savings": 12000,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/fbxt1RKphKvJULf.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/fbxt1RKphKvJULf.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Wbxt1B2rQaKHB20.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/Rbxt1RGwR2SCidk.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Qbxt1BpBjgccw1z.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/1bxt1BYjwsp0IGj.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/Obxt1BFPBfUJEC7.jpg"
+      ],
+      "color": "Black",
+      "isBestSeller": true,
+      "inStock": true,
+      "specs": [
+        {
+          "key": "Speaker Maximum Output Power",
+          "val": "120 Watts"
+        },
+        {
+          "key": "Connectivity Technology",
+          "val": "Bluetooth"
+        },
+        {
+          "key": "Mounting Type",
+          "val": "Tabletop Mount"
+        },
+        {
+          "key": "Special Feature",
+          "val": "Bluetooth"
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        }
+      ],
+      "features": [
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "Powerful Sound",
+          "text": "2.1 stereo system with dual 2.25” full-range drivers and a 5.25” high-excursion woofer for crystal-clear, room-filling audio."
+        },
+        {
+          "label": "Luxury Design",
+          "text": "Real wood veneer, tactile switches, and knobs combine classic design with modern acoustics."
+        },
+        {
+          "label": "Turntable Ready",
+          "text": "Includes Phono/RCA inputs for easy connection to your turntable."
+        },
+        {
+          "label": "Wireless Streaming",
+          "text": "Bluetooth 5.3 support allows up to 40 feet of wireless streaming."
+        },
+        {
+          "label": "Customizable Control",
+          "text": "Use the Klipsch Connect App to adjust EQ, save presets, and access firmware updates."
+        }
+      ],
+      "form": "speaker",
+      "bestFor": [
+        "Vinyl & turntables",
+        "Music & stereo listening",
+        "Wireless streaming"
+      ],
+      "jargon": [
+        {
+          "term": "Bluetooth 5.x",
+          "why": "Latest wireless standard - stable pairing and longer range than older Bluetooth."
+        },
+        {
+          "term": "Phono input",
+          "why": "Plug a turntable in directly - no separate phono preamp needed."
+        },
+        {
+          "term": "Full-range driver",
+          "why": "A single driver handles highs and lows - simple, balanced sound."
+        },
+        {
+          "term": "Adjustable EQ",
+          "why": "Tune bass, mids and treble to taste, usually via the companion app."
+        },
+        {
+          "term": "2.1 / Bi-amplified",
+          "why": "Separate amps for woofer and drivers - cleaner, more powerful sound."
+        }
+      ],
+      "verdict": "A well-rounded speaker, best suited for vinyl & turntables and music & stereo listening.",
+      "emiPerMonth": 4317
+    },
+    {
+      "sku": "0a7b5481-a916-43a6-a7c6-ce3c381d310a",
+      "name": "Klipsch The Three Plus Walnut | Bluetooth 2.1 Speaker with Phono Input, App EQ Control & Real Wood Finish – Walnut",
+      "shortName": "Klipsch The Three Plus Walnut",
+      "category": "Bluetooth Speakers",
+      "mrp": 63800,
+      "price": 51800,
+      "discount": 18,
+      "savings": 12000,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/ubxt1hV7NQAWuOn.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/ubxt1hV7NQAWuOn.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Tbxt1x9$fMIjZLI.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/hbxt1RSAKnBUgYR.png",
+        "https://m.media-amazon.com/images/X/bxt1/M/Lbxt1xWI7vGa2gY.png",
+        "https://m.media-amazon.com/images/I/81wfsqPyqtL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/Ibxt1B0UgbWJ1Fy.jpg"
+      ],
+      "color": "Walnut",
+      "isBestSeller": true,
+      "inStock": true,
+      "specs": [
+        {
+          "key": "Speaker Maximum Output Power",
+          "val": "120 Watts"
+        },
+        {
+          "key": "Connectivity Technology",
+          "val": "Bluetooth"
+        },
+        {
+          "key": "Audio Output Mode",
+          "val": "Stereo"
+        },
+        {
+          "key": "Mounting Type",
+          "val": "Tabletop Mount"
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        }
+      ],
+      "features": [
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "Powerful Audio",
+          "text": "2.1 stereo system with dual 2.25” full-range drivers and a 5.25” high-excursion woofer delivers crystal-clear sound and deep bass for larger spaces."
+        },
+        {
+          "label": "Premium Design",
+          "text": "Real wood veneer and tactile controls combine classic heritage-inspired aesthetics with modern acoustics."
+        },
+        {
+          "label": "Turntable Ready",
+          "text": "Equipped with Phono/RCA inputs for seamless connection to your turntable."
+        },
+        {
+          "label": "Wireless Streaming",
+          "text": "Bluetooth 5.3 provides stable streaming up to 40 feet from your device."
+        },
+        {
+          "label": "Customizable Control",
+          "text": "Use the Klipsch Connect App to adjust EQ, save presets, and access firmware updates."
+        }
+      ],
+      "form": "speaker",
+      "bestFor": [
+        "Vinyl & turntables",
+        "Music & stereo listening",
+        "Wireless streaming"
+      ],
+      "jargon": [
+        {
+          "term": "Bluetooth 5.x",
+          "why": "Latest wireless standard - stable pairing and longer range than older Bluetooth."
+        },
+        {
+          "term": "Phono input",
+          "why": "Plug a turntable in directly - no separate phono preamp needed."
+        },
+        {
+          "term": "Full-range driver",
+          "why": "A single driver handles highs and lows - simple, balanced sound."
+        },
+        {
+          "term": "Adjustable EQ",
+          "why": "Tune bass, mids and treble to taste, usually via the companion app."
+        },
+        {
+          "term": "2.1 / Bi-amplified",
+          "why": "Separate amps for woofer and drivers - cleaner, more powerful sound."
+        }
+      ],
+      "verdict": "A well-rounded speaker, best suited for vinyl & turntables and music & stereo listening.",
+      "emiPerMonth": 4317
+    },
+    {
+      "sku": "888408d4-39ce-41cb-be08-2a2324c7fef0",
+      "name": "Klipsch ProMedia Lumina 2.1 Computer Gaming System with Subwoofer and RGB Lighting Effects Built-in",
+      "shortName": "Klipsch ProMedia Lumina 2.1 Computer Gaming System",
+      "category": "Bluetooth Speakers",
+      "mrp": 57600,
+      "price": 46800,
+      "discount": 18,
+      "savings": 10800,
+      "image": "https://m.media-amazon.com/images/X/bxt1/M/Jbxt1RGDTc6fKk3.jpg",
+      "gallery": [
+        "https://m.media-amazon.com/images/X/bxt1/M/Jbxt1RGDTc6fKk3.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/zbxt1xUnW716vEX.jpg",
+        "https://smartpos.amazon.in/images/62469/2611443c_1774258976251.jpg",
+        "https://m.media-amazon.com/images/X/bxt1/M/obxt1Rgk47EfFYr.jpg",
+        "https://smartpos.amazon.in/images/62469/d76c4576_1774258974143.jpg",
+        "https://smartpos.amazon.in/images/62469/c8b3b28a_1774258975180.jpg"
+      ],
+      "color": "Black",
+      "isBestSeller": false,
+      "inStock": false,
+      "specs": [
+        {
+          "key": "Audio Output Mode",
+          "val": "Surround"
+        },
+        {
+          "key": "Country of Origin",
+          "val": "China"
+        }
+      ],
+      "features": [
+        {
+          "label": "Speaker Type",
+          "text": "Computer Speaker"
+        },
+        {
+          "label": "Additional Features",
+          "text": "LED Light"
+        },
+        {
+          "label": "Speaker Size",
+          "text": "9.75 Inches"
+        },
+        {
+          "label": "Power",
+          "text": "10 Watts"
+        },
+        {
+          "label": "Imported by",
+          "text": "Cinerama Private Limited, 16A, Goraguntepalya, Yeshwanthpur Industrial Suburb, Bengaluru, Karnataka, 560022"
+        },
+        {
+          "label": "AN ICON REIMAGINED",
+          "text": "- First introduced in 1999, the Klipsch ProMedia computer speaker system is one of the most praised and best-selling desktop speaker systems of all time. This newly redesigned version is a worthy successor to that honored legacy. From a completely reenvisioned cabinet design to tiltable stands and updated controls, the new Klipsch ProMedia Lumina integrates perfectly with your workstation."
+        },
+        {
+          "label": "BIG BASS, SMALL SPACE",
+          "text": "- The new Klipsch ProMedia Lumina sound system includes a low-profile subwoofer with all the low-end punch. Features include an adjustable gain knob and cable management design for minimal floor space, maximum impact."
+        },
+        {
+          "label": "INDISPENSABLE DESKTOP DEVICE",
+          "text": "- Great for gamers, content creators, music and movie lovers – the Klipsch ProMedia Lumina computer speaker system is easy to set up and will provide enjoyment for years to come. Connects via USB-C, AUX, and Bluetooth 5.3 inputs"
+        },
+        {
+          "label": "CUSTOMIZE WITH THE KLIPSCH CONTROL APP",
+          "text": "- Power up your system with the Klipsch Control desktop app. Available on all app stores, Klipsch Control allows precision command over EQ, lighting, and features such as night mode and music react mode. Three color changing options allow further customization of your workspace lighting"
+        }
+      ],
+      "form": "subwoofer",
+      "bestFor": [
+        "Adding bass / home theatre",
+        "Music & stereo listening",
+        "Wireless streaming"
+      ],
+      "jargon": [
+        {
+          "term": "Bluetooth 5.x",
+          "why": "Latest wireless standard - stable pairing and longer range than older Bluetooth."
+        },
+        {
+          "term": "Adjustable EQ",
+          "why": "Tune bass, mids and treble to taste, usually via the companion app."
+        },
+        {
+          "term": "2.1 / Bi-amplified",
+          "why": "Separate amps for woofer and drivers - cleaner, more powerful sound."
+        }
+      ],
+      "verdict": "A compact, easy-to-carry subwoofer, best suited for adding bass / home theatre and music & stereo listening.",
+      "emiPerMonth": 3900
     }
   ]
 };

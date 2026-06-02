@@ -158,16 +158,20 @@ def main():
         # short display name: take text before the first | or ( or , clause
         short = re.split(r"\s[|(]", p["name"])[0]
         short = re.sub(r"\s+(with|featuring)\b.*$", "", short, flags=re.I).strip()
+        price = p["sellingPrice"] if p.get("sellingPrice") else p["mrp"]
+        discount = p.get("discount") or (round((1 - price / p["mrp"]) * 100) if p["mrp"] else 0)
+        gallery = p.get("gallery") or ([p["image"]] if p.get("image") else [])
         products.append({
             "sku": p["sku"],
             "name": p["name"],
             "shortName": short,
             "category": p["category"],
             "mrp": p["mrp"],
-            "price": p["sellingPrice"],
-            "discount": p["discount"],
-            "savings": p["mrp"] - p["sellingPrice"],
+            "price": price,
+            "discount": discount,
+            "savings": p["mrp"] - price,
             "image": p["image"],
+            "gallery": gallery,
             "color": p.get("color", "Black"),
             "isBestSeller": p.get("isBestSeller", False),
             "inStock": p.get("inStock", True),
@@ -177,7 +181,7 @@ def main():
             "bestFor": best,
             "jargon": jargon,
             "verdict": verdict,
-            "emiPerMonth": round(p["sellingPrice"] / 12),
+            "emiPerMonth": round(price / 12),
         })
 
     header = (

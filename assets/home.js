@@ -12,7 +12,7 @@
       '<div style="font-size:11px;color:var(--copper);font-weight:700;text-transform:uppercase;margin-top:12px">Flagship pick</div>' +
       '<div style="font-weight:700;margin:4px 0 6px;font-size:14px">' + A.esc(hero.shortName) + '</div>' +
       '<div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:18px;font-weight:800">' + A.inr(hero.price) + '</span>' +
-      '<span style="color:#999;text-decoration:line-through;font-size:13px">' + A.inr(hero.mrp) + '</span></div>' +
+      (hero.mrp > hero.price ? '<span style="color:#999;text-decoration:line-through;font-size:13px">' + A.inr(hero.mrp) + '</span>' : '') + '</div>' +
       '<a class="btn btn-primary btn-block" style="margin-top:12px" href="' + A.pageUrl(hero) + '">View details</a>';
   }
 

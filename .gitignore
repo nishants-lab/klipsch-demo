@@ -10,3 +10,7 @@ Thumbs.db
 # python
 __pycache__/
 *.pyc
+
+# lighthouse raw reports (reproducible via scripts/run_lighthouse.py); keep summary
+build/lighthouse/_tmp/
+build/lighthouse/lh-*.json

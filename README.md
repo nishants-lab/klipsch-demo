@@ -28,7 +28,14 @@ The enhancements we discussed, built in as first-class features:
    applied without coupon-hunting, and reflected in the cart.
 4. **EMI surfaced everywhere** — "EMI from ₹X/mo" on cards and PDPs.
 5. **Simplified login for un-recognized users** — phone+OTP (India default), Amazon
-   sign-in, and true guest / COD paths. Auth is deferred until order placement.
+   sign-in, and true guest / COD paths. Auth is deferred until order placement. A
+   header **Sign in** button + login modal (the live site's header has no login) keeps
+   sign-in one tap away on every page.
+6. **"Klisch New" experience toggle** — a header switch that flips the whole site to a
+   CX/conversion-tuned redesign (denser, more scannable catalog grid; compacted hero;
+   stronger CTAs; warmer palette; clearer price/trust hierarchy). The choice persists
+   across pages and checkout. Lives in `assets/theme-new.css`, scoped under
+   `html[data-theme="new"]`, so classic stays the default.
 6. **Product finder** ("Find your Klipsch") on the homepage — shop by use case.
 7. **Faceted discovery** on the shop page — filter by use case, category, price; sort.
 8. **Trust & risk-reversal** — authorised-distributor / warranty messaging, reframed
@@ -68,7 +75,8 @@ klipsch-cro-demo/
 ├── product.html        # PDP with the buying guide, offers/EMI, compare, trust
 ├── checkout.html       # simulated checkout (phone OTP / Amazon / guest / COD)
 ├── assets/
-│   ├── styles.css      # all styles (brand-ish copper-on-dark theme)
+│   ├── styles.css      # all styles (brand-ish copper-on-dark theme; classic default)
+│   ├── theme-new.css   # "Klisch New" CX/conversion theme (html[data-theme="new"])
 │   ├── app.js          # shared logic: chrome, cart, compare, rules-engine helpers
 │   ├── data.js         # GENERATED catalog data (window.KLIPSCH_DATA)
 │   ├── home.js         # homepage logic + product finder

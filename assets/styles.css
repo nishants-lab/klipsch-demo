@@ -8,6 +8,9 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
+/* Avoid CLS from JS-injected chrome: hide content until the header/footer are
+   mounted in their final position, then reveal (shift happens while hidden). */
+html.chrome-pending body{visibility:hidden}
 body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;font-size:15px;overflow-x:clip}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
@@ -50,6 +53,34 @@ header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px s
 .cart-btn:hover{color:var(--copper)}
 .cart-count{position:absolute;top:-4px;right:-6px;background:var(--copper);color:#fff;border-radius:999px;font-size:10px;font-weight:700;line-height:1;padding:2px 5px;min-width:16px;text-align:center}
 .menu-toggle{display:none;background:none;border:none;font-size:22px;cursor:pointer}
+
+/* account / sign-in button */
+.acct-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;font-family:inherit;
+  font-size:13px;font-weight:700;color:var(--ink);padding:4px 2px}
+.acct-btn:hover{color:var(--copper)}
+.acct-btn .acct-ico{display:block}
+
+/* Klisch New theme toggle */
+.theme-toggle{display:inline-flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;font-family:inherit;padding:4px 2px}
+.theme-toggle .tt-track{width:38px;height:20px;border-radius:999px;background:#cfd3da;position:relative;transition:background .18s;flex:0 0 auto}
+.theme-toggle .tt-knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .18s}
+.theme-toggle.on .tt-track{background:var(--copper)}
+.theme-toggle.on .tt-knob{transform:translateX(18px)}
+.theme-toggle .tt-label{font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap}
+.theme-toggle.on .tt-label{color:var(--copper)}
+
+/* login modal */
+.login-modal .login-panel{max-width:420px}
+.login-body{padding:20px}
+.login-body .li-sub{font-size:13.5px;color:var(--muted);margin:0 0 16px}
+.login-body .li-lbl{display:block;font-size:12.5px;font-weight:700;margin-bottom:5px}
+.login-body .li-phone{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.login-body .li-cc{display:flex;align-items:center;padding:0 12px;background:var(--bg-soft);font-size:14px;font-weight:600;color:var(--muted)}
+.login-body .li-phone input{flex:1;border:none;padding:11px 13px;font-size:14px;font-family:inherit;outline:none}
+.login-body .li-account .li-hi{font-size:15px;margin-bottom:6px}
+.login-body .li-rows{display:flex;flex-direction:column;gap:2px;margin:14px 0}
+.login-body .li-link{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:600}
+.login-body .li-link:hover{color:var(--copper)}
 
 /* hero */
 .hero{background:linear-gradient(120deg,#15171b,#23262c);color:#fff;border-radius:0}
@@ -289,6 +320,9 @@ footer .pay{font-size:12px;color:var(--muted);border-top:1px solid var(--line);p
   .menu-toggle{display:block}
   .nav .search{order:3;flex-basis:100%;max-width:none}
   .nav{flex-wrap:wrap;height:auto;padding:12px 0;gap:12px}
+  /* keep the header uncluttered on mobile: hide text labels, keep icons/toggle */
+  .acct-btn .acct-label{display:none}
+  .theme-toggle .tt-label{display:none}
   .grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .finder-grid{grid-template-columns:repeat(2,1fr)}
   .pdp{grid-template-columns:1fr;gap:22px}

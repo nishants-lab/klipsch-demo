@@ -20,12 +20,46 @@
   var cart = load("klipsch_cart", []);      // [{sku, qty}]
   var compare = load("klipsch_compare", []); // [sku]
   var appliedOffer = load("klipsch_offer", null);
+  var theme = load("klipsch_theme", "classic");   // "classic" | "new"
+  // allow ?theme=new|classic to force a theme (useful for sharing links + audits)
+  try {
+    var _tp = new URLSearchParams(location.search).get("theme");
+    if (_tp === "new" || _tp === "classic") { theme = _tp; save("klipsch_theme", theme); }
+  } catch (e) {}
+  var account = load("klipsch_account", null);     // {label} when "signed in" (demo)
 
   /* ---------- offers (demo) ---------- */
   var OFFERS = [
     { code: "KLIPSCH10", label: "10% instant discount (max \u20B92,000)", pct: 10, max: 2000 },
     { code: "AUDIO5", label: "Flat \u20B9500 off above \u20B95,000", flat: 500, min: 5000 }
   ];
+
+  /* ---------- theme (Klisch New toggle) ---------- */
+  // Inject the new-theme stylesheet once; it only takes effect when
+  // <html data-theme="new"> is set, so it's inert in classic mode.
+  function ensureThemeCss() {
+    if (document.getElementById("klipsch-theme-new")) return;
+    var link = document.createElement("link");
+    link.id = "klipsch-theme-new";
+    link.rel = "stylesheet";
+    link.href = "assets/theme-new.css";
+    document.head.appendChild(link);
+  }
+  function applyTheme(t) {
+    theme = (t === "new") ? "new" : "classic";
+    document.documentElement.setAttribute("data-theme", theme);
+    save("klipsch_theme", theme);
+  }
+  // apply ASAP to avoid a flash of the wrong theme
+  ensureThemeCss();
+  document.documentElement.setAttribute("data-theme", theme);
+
+  /* ---------- reveal-after-chrome (CLS guard) ---------- */
+  // styles.css hides body while html.chrome-pending is set. We reveal once the
+  // chrome is mounted so the JS-injected header/footer don't cause a visible
+  // layout shift. Failsafe timer guarantees content is never stuck hidden.
+  function revealBody() { document.documentElement.classList.remove("chrome-pending"); }
+  setTimeout(revealBody, 1500); // failsafe in case mountChrome is never called
 
   /* ---------- toast ---------- */
   var toastEl;
@@ -99,6 +133,11 @@
       '<a class="brand" href="index.html" aria-label="Klipsch India home"><img src="assets/img/klipsch-logo.svg" alt="Klipsch India" class="brand-logo"></a>' +
       '<div class="search"><input type="text" placeholder="Search speakers, soundbars, subwoofers\u2026" aria-label="Search products"></div>' +
       '<nav class="nav-links">' + nav + "</nav>" +
+      '<button class="theme-toggle" data-theme-toggle role="switch" aria-checked="false" aria-label="Toggle Klisch New experience" title="Try the new Klipsch experience">' +
+      '<span class="tt-track"><span class="tt-knob"></span></span><span class="tt-label">Klisch New</span></button>' +
+      '<button class="acct-btn" data-open-login aria-label="Sign in">' +
+      '<svg class="acct-ico" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path></svg>' +
+      '<span class="acct-label" data-acct-label>Sign in</span></button>' +
       '<button class="cart-btn" data-open-cart aria-label="Open cart" title="Cart">' +
       '<svg class="cart-ico" viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1.3"></circle><circle cx="18" cy="21" r="1.3"></circle><path d="M1 1h3l2.5 13a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L23 6H6"></path></svg>' +
       '<span class="cart-count" data-cart-count>0</span></button>' +
@@ -132,7 +171,11 @@
       '</div></div>' +
       // compare modal
       '<div class="modal" data-compare-modal><div class="panel"><div class="mh"><h3>Compare products</h3><button data-close-compare>\u00D7</button></div>' +
-      '<div data-compare-table></div></div></div>';
+      '<div data-compare-table></div></div></div>' +
+      // login modal (was missing vs the live site)
+      '<div class="modal login-modal" data-login-modal><div class="panel login-panel">' +
+      '<div class="mh"><h3 data-login-title>Sign in to Klipsch India</h3><button data-close-login aria-label="Close">\u00D7</button></div>' +
+      '<div class="login-body" data-login-body></div></div></div>';
   }
 
   function mountChrome(active) {
@@ -142,6 +185,8 @@
     document.body.appendChild(foot);
     wireChrome();
     updateCartCount(); renderCart(); renderCompareBar();
+    syncThemeToggle(); syncAccount();
+    revealBody();
   }
 
   function wireChrome() {
@@ -159,7 +204,83 @@
     // search -> category page
     var s = qs(".search input");
     if (s) s.addEventListener("keydown", function (e) { if (e.key === "Enter") location.href = "category.html?q=" + encodeURIComponent(s.value); });
+
+    // Klisch New theme toggle
+    qsa("[data-theme-toggle]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        applyTheme(theme === "new" ? "classic" : "new");
+        syncThemeToggle();
+        toast(theme === "new" ? "Klisch New experience on" : "Back to classic view");
+      });
+    });
+    syncThemeToggle();
+
+    // login modal
+    qsa("[data-open-login]").forEach(function (b) { b.addEventListener("click", openLogin); });
+    qs("[data-close-login]").addEventListener("click", closeLogin);
+    syncAccount();
   }
+
+  /* ---------- theme toggle + login UI ---------- */
+  function syncThemeToggle() {
+    qsa("[data-theme-toggle]").forEach(function (btn) {
+      var on = theme === "new";
+      btn.classList.toggle("on", on);
+      btn.setAttribute("aria-checked", on ? "true" : "false");
+    });
+  }
+  function syncAccount() {
+    qsa("[data-acct-label]").forEach(function (el) {
+      el.textContent = account ? (account.label || "Account") : "Sign in";
+    });
+  }
+  function loginBodyHtml() {
+    if (account) {
+      return '<div class="li-account">' +
+        '<div class="li-hi">Signed in as <b>' + esc(account.label) + '</b></div>' +
+        '<p class="li-sub">This is a demo session \u2014 no real account is created. Your cart and saved items are kept on this device.</p>' +
+        '<div class="li-rows">' +
+        '<a class="li-link" href="#">Your orders</a>' +
+        '<a class="li-link" href="#">Saved addresses</a>' +
+        '<a class="li-link" href="#">Wishlist &amp; compare</a>' +
+        '</div>' +
+        '<button class="btn btn-ghost btn-block" data-logout>Sign out</button>' +
+        '</div>';
+    }
+    return '<div class="li-form">' +
+      '<p class="li-sub">Sign in for faster checkout, order tracking and member offers. Takes about 5 seconds \u2014 no password needed.</p>' +
+      '<label class="li-lbl">Mobile number</label>' +
+      '<div class="li-phone"><span class="li-cc">+91</span><input type="tel" maxlength="10" placeholder="10-digit mobile number" data-login-phone aria-label="Mobile number"></div>' +
+      '<button class="btn btn-primary btn-block" data-login-otp>Get OTP</button>' +
+      '<div class="or">or</div>' +
+      '<button class="btn amazon-btn btn-block" data-login-amazon>Sign in with Amazon</button>' +
+      '<button class="btn btn-ghost btn-block" style="margin-top:10px" data-login-guest>Continue as guest</button>' +
+      '<p class="login-note">You can browse and build your cart without signing in. We never share your number.</p>' +
+      '</div>';
+  }
+  function renderLogin() {
+    var body = qs("[data-login-body]"); if (!body) return;
+    qs("[data-login-title]").textContent = account ? "Your account" : "Sign in to Klipsch India";
+    body.innerHTML = loginBodyHtml();
+    if (account) {
+      var lo = qs("[data-logout]", body);
+      if (lo) lo.addEventListener("click", function () { account = null; save("klipsch_account", null); syncAccount(); renderLogin(); toast("Signed out"); });
+      return;
+    }
+    function signIn(label) { account = { label: label }; save("klipsch_account", account); syncAccount(); closeLogin(); toast("Signed in (demo) \u2014 welcome!"); }
+    var otp = qs("[data-login-otp]", body);
+    if (otp) otp.addEventListener("click", function () {
+      var v = (qs("[data-login-phone]", body).value || "").trim();
+      if (!/^\d{10}$/.test(v)) { toast("Enter a valid 10-digit mobile number"); return; }
+      signIn("+91 " + v.slice(0, 2) + "\u2022\u2022\u2022\u2022\u2022" + v.slice(-3));
+    });
+    var amz = qs("[data-login-amazon]", body);
+    if (amz) amz.addEventListener("click", function () { signIn("Amazon user"); });
+    var gst = qs("[data-login-guest]", body);
+    if (gst) gst.addEventListener("click", function () { closeLogin(); toast("Browsing as guest \u2014 sign in at checkout to place an order"); });
+  }
+  function openLogin() { renderLogin(); qs("[data-login-modal]").classList.add("show"); }
+  function closeLogin() { var m = qs("[data-login-modal]"); if (m) m.classList.remove("show"); }
 
   /* ---------- cart drawer render ---------- */
   function openCart() { qs("[data-cart-drawer]").classList.add("show"); }
@@ -336,6 +457,7 @@
     mountChrome: mountChrome, renderGrid: renderGrid, addToCart: addToCart,
     toggleCompare: toggleCompare, OFFERS: OFFERS,
     applyOffer: function (code) { appliedOffer = code; save("klipsch_offer", code); renderCart(); },
-    cartTotals: cartTotals, toast: toast, openCart: openCart
+    cartTotals: cartTotals, toast: toast, openCart: openCart,
+    setTheme: function (t) { applyTheme(t); syncThemeToggle(); }, getTheme: function () { return theme; }, openLogin: openLogin
   };
 })();

@@ -742,8 +742,15 @@
       if (!grid) return { pass: "SKIP", detail: "no .grid" };
       var nCols = getComputedStyle(grid).gridTemplateColumns.split(" ").filter(function (x) { return x && x !== "0px"; }).length;
       var w = window.innerWidth;
-      var exp = w <= 430 ? 1 : w <= 760 ? 2 : w <= 1024 ? 3 : 4;
-      return { pass: nCols === exp, detail: "width=" + w + " cols=" + nCols + " expected=" + exp };
+      var newTheme = document.documentElement.getAttribute("data-theme") === "new";
+      var exp;
+      if (newTheme) {
+        // Klisch New uses a denser grid for discovery (5 cols desktop)
+        exp = w <= 380 ? 2 : w <= 640 ? 2 : w <= 900 ? 3 : w <= 1100 ? 4 : 5;
+      } else {
+        exp = w <= 430 ? 1 : w <= 760 ? 2 : w <= 1024 ? 3 : 4;
+      }
+      return { pass: nCols === exp, detail: "theme=" + (newTheme ? "new" : "classic") + " width=" + w + " cols=" + nCols + " expected=" + exp };
     });
   }
 
